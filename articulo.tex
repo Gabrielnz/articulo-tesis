@@ -347,33 +347,24 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{placeins} % ayuda a que las tablas no queden en medio de los textos
+\usepackage{tabulary} %tabla que ajusta celdas al texto
+\usepackage[font={footnotesize}]{caption} % tamano para la descripcion de las tablas
+\captionsetup{labelformat=empty} % elimina el prefijo de los nombres de las tablas
+\renewcommand{\arraystretch}{1.3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Bare Demo of IEEEtran.cls for Conferences}
+\title{Software para el Espectrofot\'{o}metro ``MiniScan XE Plus'' usado en el Diagn\'{o}stico de Patolog\'{i}as Dermatol\'{o}gicas en Pacientes.}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Michael Shell}
-\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
-Georgia Institute of Technology\\
-Atlanta, Georgia 30332--0250\\
-Email: http://www.michaelshell.org/contact.html}
-\and
-\IEEEauthorblockN{Homer Simpson}
-\IEEEauthorblockA{Twentieth Century Fox\\
-Springfield, USA\\
-Email: homer@thesimpsons.com}
-\and
-\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
-\IEEEauthorblockA{Starfleet Academy\\
-San Francisco, California 96678-2391\\
-Telephone: (800) 555--1212\\
-Fax: (888) 555--1212}}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -383,19 +374,18 @@ Fax: (888) 555--1212}}
 % for over three affiliations, or if they all won't fit within the width
 % of the page, use this alternative format:
 % 
-%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
-%Homer Simpson\IEEEauthorrefmark{2},
-%James Kirk\IEEEauthorrefmark{3}, 
-%Montgomery Scott\IEEEauthorrefmark{3} and
-%Eldon Tyrell\IEEEauthorrefmark{4}}
-%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
-%Georgia Institute of Technology,
-%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
-%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
-%Email: homer@thesimpsons.com}
-%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
-%Telephone: (800) 555--1212, Fax: (888) 555--1212}
-%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+\author{\IEEEauthorblockN{Gabriel N\'{u}\~{n}ez\IEEEauthorrefmark{1},
+Harold Vazques\IEEEauthorrefmark{1},
+Patricia Guerrero\IEEEauthorrefmark{1} y 
+Aar\'{o}n Mu\~{n}oz\IEEEauthorrefmark{2}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Departamento de Computaci\'{o}n, FACYT
+\\
+Universidad de Carabobo, Venezuela
+\\
+Emails: gabriel.nzn@gmail.com, hvasquez@gmail.com, pjpatri@gmail.com}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo, Venezuela
+\\
+Email: aamunozmorales@gmail.com}}
 
 
 
@@ -412,7 +402,7 @@ Fax: (888) 555--1212}}
 
 \begin{abstract}
 %\boldmath
-The abstract goes here.
+El Espectrofot\'{o}metro de reflexi\'{o}n difusa ``MiniScan XE Plus'' es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), el cu\'{a}l ayuda a los m\'{e}dicos dermat\'{o}logos a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software comercial propietario disponible para la utilizaci\'{o}n de dicho instrumento es poco amigable, dificil de utilizar e imposible de modificar, mejorar y extender. El presente trabajo tiene como objetivo desarrollar un software amigable, modificable, mejorable y extensible, que se ajuste a las necesidades de los dermat\'{o}logos y que garantice un mejor aprovechamiento del instrumento en cuesti\'{o}n.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -438,18 +428,47 @@ The abstract goes here.
 
 
 
-\section{Introduction}
+\section{Introducci\'{o}n}
 % no \IEEEPARstart
-This demo file is intended to serve as a ``starter file''
-for IEEE conference papers produced under \LaTeX\ using
-IEEEtran.cls version 1.7 and later.
+Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual del \'{a}rea sospechada es siempre el primer paso y el m\'{a}s importante. Esto es seguido generalmente por una escisi\'{o}n
+o biopsia por punci\'{o}n, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva y los pacientes a menudo se someten a cicatrices y dolor durante la escisi\'{o}n. Por otro lado, las t\'{e}cnicas de \'{o}ptica son por lo general no invasivas y los resultados de estas son a menudo objetivos \cite{Bersha}.
+
+Los avances tecnol\'{o}gicos en la actualidad permiten emplear t\'{e}cnicas \'{o}pticas con la capacidad de estudiar  las propiedades estructurales y bioqu\'{i}micas del tejido biol\'{o}gico de manera precisa y no invasiva. Los instrumentos que emplean tales t\'{e}cnicas son de gran ayuda para los m\'{e}dicos dermat\'{o}logos, raz\'{o}n por la cual han tomado suma importancia en el \'{a}rea m\'{e}dica dermatol\'{o}gica.
+
+La Espectroscop\'{i}a de reflectancia difusa es una t\'{e}cnica que permite estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, midiendo el espectro de luz visible entre 400nm y 700nm sobre el tejido en estudio, y midiendo el nivel de reflectancia del mismo, dando como resultado una curva de reflectancia difusa, mostrando as\'{i} el nivel de reflexi\'{o}n difusa del espectro de luz visible sobre dicho tejido, en este caso, la piel del paciente \cite{Perez}.
+
+En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC) dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``MiniScan XE Plus'', el cual es un instrumento utilizado para medir la transmisi\'{o}n y/o reflectancia de espec\'{i}menes, como una funci\'{o}n de longitud de onda, que aplica una t\'{e}cnica llamada espectroscop\'{i}a de reflectancia difusa. 
+
+Para la emplear el uso del instrumento en estudio, el CIMBUC ha tenido que utilizar el software comercial disponible para la utilizaci\'{o}n del mismo, denominado ``HunterLab Universal Software'', el cual es un software propietario de 16-bit dise\~{n}ado para el Sistema Operativo Microsoft Windows Version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000, Windows NT y Windows XP \cite{HunterLab-manual}.
+
+El ``HunterLab Universal Software'' es un software comercial y propietario que fue descontinuado en el a\~{n}o 2008, por lo tanto no existe la posibilidad de modificarlo, mejorarlo ni extenderlo; ofrece funcionalidades que abarcan no s\'{o}lo la utilizaci\'{o}n del Espectrofot\'{o}metro, sino tambi\'{e}n la utilizaci\'{o}n de otros instrumentos ofrecidos por la empresa ``HunterLab'', causando que la interfaz gr\'{a}fica de usuario contenga m\'{a}s opciones disponibles de las necesarias para manejar el instrumento en estudio. Asimismo, la interfaz gr\'{a}fica de usuario est\'{a} en idioma ingl\'{e}s, por lo tanto es poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos. Aunado al hecho de que los resultados generados por dicho software no poseen el formato con el que trabajan los dermat\'{o}logos, haciendo necesario su traspaso manual. 
+
+Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el ``HunterLab Universal Software'', lo cual es un problema grave, ya que no s\'{o}lo ralentiza cada consulta con cada paciente, sino que genera la necesidad de asistencia t\'{e}cnica disponible en todo momento para la debida utilizaci\'{o}n de dicho software; por \'{u}ltimo y no menos importante, disminuye el nivel de aprovechamiento potencial del instrumento de medici\'{o}n en estudio.
+
+Con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan la calidad de ese software. Estos atributos no est\'{a}n directamente relacionados con lo que el software hace. M\'{a}s bien, reflejan su comportamiento durante su ejecuci\'{o}n, en la estructura y organizaci\'{o}n del programa fuente, y en la documentaci\'{o}n asociada \cite{Sommerville}.
+
+El conjunto espec\'{i}fico de atributos que se espera de un software depende obviamente de su aplicaci\'{o}n. Esto se generaliza en el conjunto de atributos que se muestran en la Tabla 1 mostrada a continuaci\'{o}n:
+\FloatBarrier
+	\begin{table}[htb]
+		
+		\caption{TABLA I.    Atributos esenciales de un buen software}
+		\label{tabla_1}
+		\centering
+		\setlength{\extrarowheight}{5pt}
+		\begin{tabulary}{5cm}{|c|c|}
+			\hline
+			Mantenibilidad & Confiabilidad\\ \hline
+			Eficiencia & Usabilidad\\ \hline
+		\end{tabulary}
+			
+	\end{table}
+\FloatBarrier
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
-I wish you the best of success.
 
 \hfill mds
  
-\hfill January 11, 2007
+\hfill Julio 21, 2015
 
 \subsection{Subsection Heading Here}
 Subsection text here.
@@ -586,13 +605,43 @@ The authors would like to thank...
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+\bibitem{Bersha}
+K.~S. Bersha, \emph{Spectral Imaging And Analysis Of Human Skin}.\hskip 1em plus
+  0.5em minus 0.4em\relax University of Eastern England, 2010.
+
+\bibitem{Perez}
+A.~D. P\'{e}rez, \emph{Estudio de la Reflexi\'{o}n \'{O}ptica Difusa en Tejido Biol\'{o}gico}.\hskip 1em plus
+  0.5em minus 0.4em\relax Escuela Superior de Ingenier\'{i}a Mec\'{a}nica y El\'{e}ctrica Unidad Zacatenco, 2012.
+  
+\bibitem{Narea}
+F. Narea, S. Vivas y A. Mu\~{n}oz, \emph{Recuperaci\'{o}n del coeficiente de absorci\'{o}n de la epidermis en la piel humana}.\hskip 1em plus
+  0.5em minus 0.4em\relax Sociedad Espa\~{n}ola de \'{O}ptica, 2015.
+
+\bibitem{Sommerville}
+I. Sommerville, \emph{Ingenier\'{i}a del Software}, 7ma~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Madrid: Pearson Education, 2005.
+
+\bibitem{Pressman}
+R.~S. Pressman, \emph{Ingenier\'{i}a del Software, un enfoque pr\'{a}ctico}, 5ta~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Madrid: McGraw Hill, 2002.
+
+\bibitem{Baskerville}
+R.~L. Baskerville, \emph{Investigating Information Systems with Action Research}, vol~2.\hskip 1em plus
+  0.5em minus 0.4em\relax Atlanta: Association for Information Systems, 1999.
+
+\bibitem{Schwaber&Sutherland}
+K. Schwaber y J. Sutherland, \emph{Scrum guide}.\hskip 1em plus
+  0.5em minus 0.4em\relax 2013.
+
+\bibitem{HunterLab-manual}
+\emph{Universal Software Versions 4.10 and Above User's Manual}.\hskip 1em plus
+  0.5em minus 0.4em\relax Virginia: Hunter Associates Laboratory, 2001.
+
+\bibitem{MiniScanXEPlus-manual}
+\emph{MiniScan XE Plus User's Guide Version 2.4}.\hskip 1em plus
+  0.5em minus 0.4em\relax Virginia: Hunter Associates Laboratory, 2006.
 
 \end{thebibliography}
-
-
 
 
 % that's all folks
