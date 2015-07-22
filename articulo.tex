@@ -361,7 +361,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Software para el Espectrofot\'{o}metro ``MiniScan XE Plus'' usado en el Diagn\'{o}stico de Patolog\'{i}as Dermatol\'{o}gicas en Pacientes.}
+\title{Software para el Espectrofot\'{o}metro ``MiniScan XE Plus'' usado en el Diagn\'{o}stico de Patolog\'{i}as Dermatol\'{o}gicas en Pacientes}
 
 
 % author names and affiliations
@@ -404,7 +404,7 @@ Email: aamunozmorales@gmail.com}}
 
 \begin{abstract}
 %\boldmath
-El Espectrofot\'{o}metro de reflexi\'{o}n difusa ``MiniScan XE Plus'' es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), el cu\'{a}l ayuda a los m\'{e}dicos dermat\'{o}logos a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software comercial propietario disponible para la utilizaci\'{o}n de dicho instrumento es poco amigable, dificil de utilizar e imposible de modificar, mejorar y extender. El presente trabajo tiene como objetivo desarrollar un software amigable, modificable, mejorable y extensible, que se ajuste a las necesidades de los dermat\'{o}logos y que garantice un mejor aprovechamiento del instrumento en cuesti\'{o}n.
+El Espectrofot\'{o}metro de reflexi\'{o}n difusa ``MiniScan XE Plus'' es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), el cu\'{a}l ayuda a los dermat\'{o}logos a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software disponible para la utilizaci\'{o}n de dicho instrumento es poco amigable, dificil de utilizar e imposible de modificar y extender. La presente investigaci\'{o}n tiene como objetivo desarrollar un nuevo software que se ajuste a las necesidades de los dermat\'{o}logos y que garantice un mejor aprovechamiento del instrumento en cuesti\'{o}n.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -430,50 +430,42 @@ El Espectrofot\'{o}metro de reflexi\'{o}n difusa ``MiniScan XE Plus'' es un inst
 
 \section{Introducci\'{o}n}
 % no \IEEEPARstart
-Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual del \'{a}rea sospechada es siempre el primer paso y el m\'{a}s importante. Esto es seguido generalmente por una escisi\'{o}n
-o biopsia por punci\'{o}n, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva y los pacientes a menudo se someten a cicatrices y dolor durante la escisi\'{o}n. Por otro lado, las t\'{e}cnicas \'{o}pticas son por lo general no invasivas y los resultados de estas son a menudo objetivos. Durante el diagn\'{o}stico no invasivo no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor y a cicatrices durante el tratamiento \cite{Bersha}.
+Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual es siempre el primer paso y el m\'{a}s importante. Esto es seguido generalmente por una biopsia, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva y los pacientes a menudo se someten a cicatrices y dolor durante la biopsia. Por otro lado, las t\'{e}cnicas \'{o}pticas son por lo general no invasivas y los resultados de estas son a menudo objetivos. Durante el diagn\'{o}stico no invasivo no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento \cite{Bersha}.
 
-Los avances tecnol\'{o}gicos en la actualidad permiten emplear t\'{e}cnicas \'{o}pticas con la capacidad de estudiar  las propiedades estructurales y bioqu\'{i}micas del tejido biol\'{o}gico de manera precisa y no invasiva. Dicho lo anterior, la Espectroscop\'{i}a de reflectancia difusa es una t\'{e}cnica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}.
+La Espectroscop\'{i}a de reflectancia difusa es una t\'{e}cnica \'{o}ptica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}.
 
-Los instrumentos que emplean t\'{e}cnicas como la mencionada previamente son de gran ayuda para los m\'{e}dicos dermat\'{o}logos, raz\'{o}n por la cual han tomado suma importancia en el \'{a}rea m\'{e}dica dermatol\'{o}gica.
+En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC) dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``MiniScan XE Plus''. 
 
-En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC) dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``MiniScan XE Plus'', el cual es un instrumento utilizado para medir la transmisi\'{o}n y/o reflectancia de espec\'{i}menes, como una funci\'{o}n de longitud de onda, que aplica una t\'{e}cnica llamada espectroscop\'{i}a de reflectancia difusa. 
+Para la emplear el uso del instrumento mencionado, el CIMBUC ha tenido que utilizar el software comercial disponible para la utilizaci\'{o}n del mismo, denominado ``HunterLab Universal Software'', el cual es un software de 16-bit dise\~{n}ado para el Sistema Operativo Microsoft Windows Version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000, Windows NT y Windows XP \cite{HunterLab-manual}.
 
-Para la emplear el uso del instrumento en estudio, el CIMBUC ha tenido que utilizar el software comercial disponible para la utilizaci\'{o}n del mismo, denominado ``HunterLab Universal Software'', el cual es un software propietario de 16-bit dise\~{n}ado para el Sistema Operativo Microsoft Windows Version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000, Windows NT y Windows XP \cite{HunterLab-manual}.
+El ``HunterLab Universal Software'' es un software comercial y propietario que fue descontinuado en el a\~{n}o 2008, por lo tanto no existe la posibilidad de modificarlo, mejorarlo ni extenderlo; su interfaz gr\'{a}fica de usuario est\'{a} en idioma ingl\'{e}s, y contiene m\'{a}s opciones disponibles de las necesarias para manejar el instrumento en estudio, por lo tanto es poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos. Aunado al hecho de que los resultados generados por dicho software no poseen el formato con el que trabajan los dermat\'{o}logos, haciendo necesario su traspaso manual. 
 
-El ``HunterLab Universal Software'' es un software comercial y propietario que fue descontinuado en el a\~{n}o 2008, por lo tanto no existe la posibilidad de modificarlo, mejorarlo ni extenderlo; ofrece funcionalidades que abarcan no s\'{o}lo la utilizaci\'{o}n del Espectrofot\'{o}metro, sino tambi\'{e}n la utilizaci\'{o}n de otros instrumentos ofrecidos por la empresa ``HunterLab'', causando que la interfaz gr\'{a}fica de usuario contenga m\'{a}s opciones disponibles de las necesarias para manejar el instrumento en estudio. Asimismo, la interfaz gr\'{a}fica de usuario est\'{a} en idioma ingl\'{e}s, por lo tanto es poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos. Aunado al hecho de que los resultados generados por dicho software no poseen el formato con el que trabajan los dermat\'{o}logos, haciendo necesario su traspaso manual. 
+Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el ``HunterLab Universal Software'', ralentizando cada consulta con cada paciente, y generando la necesidad de asistencia t\'{e}cnica disponible en todo momento para la debida utilizaci\'{o}n de dicho software; por \'{u}ltimo disminuye el nivel de aprovechamiento potencial del instrumento de medici\'{o}n en estudio.
 
-Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el ``HunterLab Universal Software'', lo cual es un problema grave, ya que no s\'{o}lo ralentiza cada consulta con cada paciente, sino que genera la necesidad de asistencia t\'{e}cnica disponible en todo momento para la debida utilizaci\'{o}n de dicho software; por \'{u}ltimo y no menos importante, disminuye el nivel de aprovechamiento potencial del instrumento de medici\'{o}n en estudio.
+Ahora bien, con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan la calidad de ese software, los cuales se resumen en Mantenibilidad, Confiabilidad, Eficiencia y Usabilidad \cite{Sommerville}.
 
-Ahora bien, con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan la calidad de ese software. Estos atributos no est\'{a}n directamente relacionados con lo que el software hace. M\'{a}s bien, reflejan su comportamiento durante su ejecuci\'{o}n, en la estructura y organizaci\'{o}n del programa fuente, y en la documentaci\'{o}n asociada \cite{Sommerville}.
-
-El conjunto espec\'{i}fico de atributos que se espera de un software depende obviamente de su aplicaci\'{o}n. Esto se generaliza en el conjunto de atributos que se muestran en la Tabla 1 mostrada a continuaci\'{o}n:
-\FloatBarrier
-	\begin{table}[htb]
+%El conjunto espec\'{i}fico de atributos que se espera de un software depende %obviamente de su aplicaci\'{o}n. Esto se generaliza en el conjunto de atributos %que se muestran en la Tabla 1 mostrada a continuaci\'{o}n:
+%\FloatBarrier
+%	\begin{table}[htb]
 		
-		\caption{TABLA I.    Atributos esenciales de un buen software}
-		\label{tabla_1}
-		\centering
-		\setlength{\extrarowheight}{5pt}
-		\begin{tabulary}{5cm}{|c|c|}
-			\hline
-			Mantenibilidad & Confiabilidad\\ \hline
-			Eficiencia & Usabilidad\\ \hline
-		\end{tabulary}
+%		\caption{TABLA I.    Atributos esenciales de un buen software}
+%		\label{tabla_1}
+%		\centering
+%		\setlength{\extrarowheight}{5pt}
+%		\begin{tabulary}{5cm}{|c|c|}
+%			\hline
+%			Mantenibilidad & Confiabilidad\\ \hline
+%			Eficiencia & Usabilidad\\ \hline
+%		\end{tabulary}
 			
-	\end{table}
-\FloatBarrier
+%	\end{table}
+%\FloatBarrier
+Debido a que el ``HunterLab Universal Software'' es propietario, el c\'{o}digo fuente del mismo no est\'{a} disponible, de manera que no posee el primer atributo esencial para un buen software: la mantenibilidad; ya que el software no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas. Por la misma raz\'{o}n de que no se tiene el c\'{o}digo fuente, no se puede determinar con certidumbre el segundo atributo: la confiabilidad; ya que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad existentes en este software. Por \'{u}ltimo la usabilidad del software existente es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
 
-Debido a que el ``HunterLab Universal Software'' es propietario, el CIMBUC no dispone del c\'{o}digo fuente del mismo, lo que se traduce en la inexistencia del primer atributo esencial para un buen software: la mantenibilidad; ya que el software propietario no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas. Por la misma raz\'{o}n de que no se tiene el c\'{o}digo fuente, no se puede determinar con certidumbre el segundo atributo: la confiabilidad; debido a que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad existentes en dicho software. Por \'{u}ltimo y no menos importante, la usabilidad del software existente es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
-
-Teniendo en cuenta todo lo mencionado previamente, y siguiendo los lineamientos de dise\~{n}o y calidad del software que se consideran pertinentes, se est\'{a} desarrollando un software amigable, mejorable y extensible, el cual ofrece las funciones que necesitan los dermat\'{o}logos para establecer diagn\'{o}sticos, emplea el formato de historia m\'{e}dica con el que trabajan, y permite la exportaci\'{o}n de los resultados a un formato de archivo portable. Por \'{u}ltimo y no menos importante, se est\'{a} creando una base sobre la cual se prodr\'{a}n trabajar proyectos futuros que necesiten utilizar los resultados de este software como insumo.
+Teniendo en cuenta todo lo mencionado previamente, y siguiendo los lineamientos de dise\~{n}o y calidad del software que se consideran pertinentes, se est\'{a} desarrollando un software amigable, mejorable y extensible, el cual ofrece las funciones que necesitan los dermat\'{o}logos para establecer diagn\'{o}sticos, emplea el formato de historia m\'{e}dica con el que trabajan, y permite la exportaci\'{o}n de los resultados a un formato de archivo portable. Por \'{u}ltimo, se est\'{a} creando una base sobre la cual se prodr\'{a}n trabajar proyectos futuros que necesiten utilizar los resultados de este software como insumo.
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
-
-\hfill mds
- 
-\hfill Julio 21, 2015
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
