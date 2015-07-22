@@ -353,6 +353,8 @@
 \usepackage[font={footnotesize}]{caption} % tamano para la descripcion de las tablas
 \captionsetup{labelformat=empty} % elimina el prefijo de los nombres de las tablas
 \renewcommand{\arraystretch}{1.3}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\abstractname}{Resumen}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -426,16 +428,14 @@ El Espectrofot\'{o}metro de reflexi\'{o}n difusa ``MiniScan XE Plus'' es un inst
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
-
-
 \section{Introducci\'{o}n}
 % no \IEEEPARstart
 Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual del \'{a}rea sospechada es siempre el primer paso y el m\'{a}s importante. Esto es seguido generalmente por una escisi\'{o}n
-o biopsia por punci\'{o}n, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva y los pacientes a menudo se someten a cicatrices y dolor durante la escisi\'{o}n. Por otro lado, las t\'{e}cnicas de \'{o}ptica son por lo general no invasivas y los resultados de estas son a menudo objetivos \cite{Bersha}.
+o biopsia por punci\'{o}n, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva y los pacientes a menudo se someten a cicatrices y dolor durante la escisi\'{o}n. Por otro lado, las t\'{e}cnicas \'{o}pticas son por lo general no invasivas y los resultados de estas son a menudo objetivos. Durante el diagn\'{o}stico no invasivo no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor y a cicatrices durante el tratamiento \cite{Bersha}.
 
-Los avances tecnol\'{o}gicos en la actualidad permiten emplear t\'{e}cnicas \'{o}pticas con la capacidad de estudiar  las propiedades estructurales y bioqu\'{i}micas del tejido biol\'{o}gico de manera precisa y no invasiva. Los instrumentos que emplean tales t\'{e}cnicas son de gran ayuda para los m\'{e}dicos dermat\'{o}logos, raz\'{o}n por la cual han tomado suma importancia en el \'{a}rea m\'{e}dica dermatol\'{o}gica.
+Los avances tecnol\'{o}gicos en la actualidad permiten emplear t\'{e}cnicas \'{o}pticas con la capacidad de estudiar  las propiedades estructurales y bioqu\'{i}micas del tejido biol\'{o}gico de manera precisa y no invasiva. Dicho lo anterior, la Espectroscop\'{i}a de reflectancia difusa es una t\'{e}cnica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}.
 
-La Espectroscop\'{i}a de reflectancia difusa es una t\'{e}cnica que permite estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, midiendo el espectro de luz visible entre 400nm y 700nm sobre el tejido en estudio, y midiendo el nivel de reflectancia del mismo, dando como resultado una curva de reflectancia difusa, mostrando as\'{i} el nivel de reflexi\'{o}n difusa del espectro de luz visible sobre dicho tejido, en este caso, la piel del paciente \cite{Perez}.
+Los instrumentos que emplean t\'{e}cnicas como la mencionada previamente son de gran ayuda para los m\'{e}dicos dermat\'{o}logos, raz\'{o}n por la cual han tomado suma importancia en el \'{a}rea m\'{e}dica dermatol\'{o}gica.
 
 En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC) dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``MiniScan XE Plus'', el cual es un instrumento utilizado para medir la transmisi\'{o}n y/o reflectancia de espec\'{i}menes, como una funci\'{o}n de longitud de onda, que aplica una t\'{e}cnica llamada espectroscop\'{i}a de reflectancia difusa. 
 
@@ -445,7 +445,7 @@ El ``HunterLab Universal Software'' es un software comercial y propietario que f
 
 Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el ``HunterLab Universal Software'', lo cual es un problema grave, ya que no s\'{o}lo ralentiza cada consulta con cada paciente, sino que genera la necesidad de asistencia t\'{e}cnica disponible en todo momento para la debida utilizaci\'{o}n de dicho software; por \'{u}ltimo y no menos importante, disminuye el nivel de aprovechamiento potencial del instrumento de medici\'{o}n en estudio.
 
-Con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan la calidad de ese software. Estos atributos no est\'{a}n directamente relacionados con lo que el software hace. M\'{a}s bien, reflejan su comportamiento durante su ejecuci\'{o}n, en la estructura y organizaci\'{o}n del programa fuente, y en la documentaci\'{o}n asociada \cite{Sommerville}.
+Ahora bien, con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan la calidad de ese software. Estos atributos no est\'{a}n directamente relacionados con lo que el software hace. M\'{a}s bien, reflejan su comportamiento durante su ejecuci\'{o}n, en la estructura y organizaci\'{o}n del programa fuente, y en la documentaci\'{o}n asociada \cite{Sommerville}.
 
 El conjunto espec\'{i}fico de atributos que se espera de un software depende obviamente de su aplicaci\'{o}n. Esto se generaliza en el conjunto de atributos que se muestran en la Tabla 1 mostrada a continuaci\'{o}n:
 \FloatBarrier
@@ -463,20 +463,17 @@ El conjunto espec\'{i}fico de atributos que se espera de un software depende obv
 			
 	\end{table}
 \FloatBarrier
+
+Debido a que el ``HunterLab Universal Software'' es propietario, el CIMBUC no dispone del c\'{o}digo fuente del mismo, lo que se traduce en la inexistencia del primer atributo esencial para un buen software: la mantenibilidad; ya que el software propietario no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas. Por la misma raz\'{o}n de que no se tiene el c\'{o}digo fuente, no se puede determinar con certidumbre el segundo atributo: la confiabilidad; debido a que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad existentes en dicho software. Por \'{u}ltimo y no menos importante, la usabilidad del software existente es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
+
+Teniendo en cuenta todo lo mencionado previamente, y siguiendo los lineamientos de dise\~{n}o y calidad del software que se consideran pertinentes, se est\'{a} desarrollando un software amigable, mejorable y extensible, el cual ofrece las funciones que necesitan los dermat\'{o}logos para establecer diagn\'{o}sticos, emplea el formato de historia m\'{e}dica con el que trabajan, y permite la exportaci\'{o}n de los resultados a un formato de archivo portable. Por \'{u}ltimo y no menos importante, se est\'{a} creando una base sobre la cual se prodr\'{a}n trabajar proyectos futuros que necesiten utilizar los resultados de este software como insumo.
+
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
 
 \hfill mds
  
 \hfill Julio 21, 2015
-
-\subsection{Subsection Heading Here}
-Subsection text here.
-
-
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
-
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -560,22 +557,25 @@ Subsubsection text here.
 % footnotes above bottom floats. This can be corrected via the \fnbelowfloat
 % command of the stfloats package.
 
+\section{Marco te\'{o}rico}
+...
 
+\section{Marco metodol\'{o}gico}
+...
 
-\section{Conclusion}
-The conclusion goes here.
+\section{Tecnolog\'{i}as utilizadas}
+...
 
-
+\section{Conclusi\'{o}n}
+...
 
 
 % conference papers do not normally have an appendix
 
 
 % use section* for acknowledgement
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
+\section*{Agradecimientos}
+...
 
 
 
