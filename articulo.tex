@@ -355,6 +355,7 @@
 \renewcommand{\arraystretch}{1.3}
 \renewcommand{\refname}{Referencias}
 \renewcommand{\abstractname}{Resumen}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -428,7 +429,7 @@ El Espectrofot\'{o}metro de reflexi\'{o}n difusa ``MiniScan XE Plus'' es un inst
 % no \IEEEPARstart
 Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual es siempre el primer paso y el m\'{a}s importante. Esto es seguido generalmente por una biopsia, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva y los pacientes a menudo se someten a cicatrices y dolor durante la biopsia. Por otro lado, las t\'{e}cnicas \'{o}pticas son por lo general no invasivas y los resultados de estas son a menudo objetivos. Durante el diagn\'{o}stico no invasivo no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento \cite{Bersha}.
 
-La Espectroscop\'{i}a de reflectancia difusa es una t\'{e}cnica \'{o}ptica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}.
+La Espectroscop\'{i}a de Reflectancia Difusa es una t\'{e}cnica \'{o}ptica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}.
 
 En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC) dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``MiniScan XE Plus''. 
 
@@ -459,10 +460,6 @@ Ahora bien, con respecto a software de calidad, as\'{i} como los servicios que p
 Debido a que el ``HunterLab Universal Software'' es propietario, el c\'{o}digo fuente del mismo no est\'{a} disponible, de manera que no posee el primer atributo esencial para un buen software: la mantenibilidad; ya que el software no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas. Por la misma raz\'{o}n de que no se tiene el c\'{o}digo fuente, no se puede determinar con certidumbre el segundo atributo: la confiabilidad; ya que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad existentes en este software. Por \'{u}ltimo la usabilidad del software existente es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
 
 Teniendo en cuenta todo lo mencionado previamente, y siguiendo los lineamientos de dise\~{n}o y calidad del software que se consideran pertinentes, se est\'{a} desarrollando un software amigable, modificable y extensible, el cual ofrece las funciones que necesitan los dermat\'{o}logos para establecer diagn\'{o}sticos, emplea el formato de historia m\'{e}dica con el que trabajan, y permite la exportaci\'{o}n de los resultados a un formato de archivo portable. Por \'{u}ltimo, se est\'{a} creando una base sobre la cual se prodr\'{a}n trabajar proyectos futuros que utilicen los resultados de este nuevo software como insumo.
-
-\hfill mds
- 
-\hfill Julio 22, 2015
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
@@ -549,11 +546,35 @@ Teniendo en cuenta todo lo mencionado previamente, y siguiendo los lineamientos 
 % footnotes above bottom floats. This can be corrected via the \fnbelowfloat
 % command of the stfloats package.
 
-\section{Materiales, Tecnolog\'{i}as y M\'{e}todos}
-	\subsection{Tecnolog\'{i}as}
+\section{Recursos y M\'{e}todos}
+	
+	\subsection{Recursos}
+		\subsubsection{MiniScan XE Plus}
+		Es un instrumento de medici\'{o}n del color creado por la empresa ``HunterLab'', de dise\~{n}o compacto y portable \cite{MiniScanXEPlus-manual}. Este instrumento mide la cantidad de luz que refleja una muestra dentro del espectro de luz que va desde 400nm hasta 700nm, generando como resultado 31 puntos espectrales dentro de ese rango, los cuales son el insumo principal del nuevo software.
+
+		\subsubsection{MiniScan XE Plus OCX Kit}
+			Es un archivo dise\~{n}ado por la empresa ``HunterLab'' para controlar y/o realizar mediciones con el ``MiniScan XE Plus''. Su objetivo es proveer a los desarrolladores con un componente reutilizable de software que da acceso a las caracteristicas m\'{a}s comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.		
+					
 		\subsubsection{Qt}
-			Es un framework de dise\~{n}o, desarrollo e implementaci\'{o}n de software escrito en C++, que provee un entorno integrado de desarrollo (IDE) multi-plataforma.
+			Es un framework de desarrollo de aplicaciones multiplataforma para sistemas de escritorio, sistemas integrados y sistemas m\'{o}viles \cite{Qt}. Se est\'{a} utilizando la versi\'{o}n Open Source de este framework para el desarrollo del nuevo software.
+			
+		\subsubsection{Visual Studio}
+			Es un entorno integrado de desarrollo (IDE) para crear aplicaciones en varias plataformas como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este IDE para desarrollar una librer\'{i}a escrita en Visual Basic .NET, la cual act\'{u}a como intermediaria entre el OCX Kit y el framework Qt, para as\'{i} utilizar las caracteristicas del ``MiniScan XE Plus'' en el nuevo software.
+	
+	\subsection{M\'{e}todos}
+	
+		\subsubsection{Coordenadas de Cromaticidad CIE 1964}
+			Son coordenadas que representan los valores triest\'{i}mulo de un color, las cuales siguen el est\'{a}ndar del sistema tricrom\'{a}tico CIE 1964 \cite{CIE}. El m\'{e}todo utilizado para calcular estas coordenadas \cite{Schanda} es implementado en el nuevo software, para determinar las coordenadas del espacio CIE 1976(L*a*b*).
 		
+		\subsubsection{Espacio CIE 1976(L*a*b*)}
+			Es un espacio de transformaci\'{o}n de coordenadas del color definido por la ``Commission Internationale de l'Eclairage'' \cite{CIE}, el cual emplea el uso de las coordenadas de Cromaticidad CIE 1964. El m\'{e}todo utilizado para el c\'{a}lculo de las coordenadas resultantes de este espacio \cite{Schanda} es implementado en el nuevo software, para determinar ciertas propiedades \'{o}pticas en la piel de los pacientes.
+	
+		\subsubsection{Coeficiente de Absorci\'{o}n}
+			La melanina que se encuentra distribuida en la epidermis es el  principal agente absorbente de la piel, y por lo tanto determina en gran parte el 
+color de la piel \cite{Narea}. El m\'{e}todo utilizado para recuperar el coeficiente de absorci\'{o}n en la epidermis de la piel humana \cite{Narea} est\'{a} siendo implementado en el nuevo software, para determinar el nivel de concentraci\'{o}n de melanina en la piel de los pacientes.
+		
+		\subsubsection{\'{I}ndice de Eritema}
+			El objetivo de este \'{i}ndice es evaluar solamente la luz absorbida por la hemoglobina \cite{Bersha}, tomando en cuenta el coeficiente de absorci\'{o}n de la melanina \cite{Narea}. El m\'{e}todo empleado para calcular este \'{i}ndice \cite{Bersha} est\'{a} siendo implementado en el nuevo software, para determinar el nivel de inflamaci\'{o}n en la piel de los pacientes.
 
 \section{Conclusi\'{o}n}
 ...
@@ -603,20 +624,28 @@ A.~D. P\'{e}rez, \emph{Estudio de la Reflexi\'{o}n \'{O}ptica Difusa en Tejido B
   0.5em minus 0.4em\relax Escuela Superior de Ingenier\'{i}a Mec\'{a}nica y El\'{e}ctrica Unidad Zacatenco, 2012.
   
 \bibitem{Narea}
-F. Narea, S. Vivas y A. Mu\~{n}oz, \emph{Recuperaci\'{o}n del coeficiente de absorci\'{o}n de la epidermis en la piel humana}.\hskip 1em plus
+F. Narea et al., \emph{Recuperaci\'{o}n del coeficiente de absorci\'{o}n de la epidermis en la piel humana}.\hskip 1em plus
   0.5em minus 0.4em\relax Sociedad Espa\~{n}ola de \'{O}ptica, 2015.
 
 \bibitem{Sommerville}
 I. Sommerville, \emph{Ingenier\'{i}a del Software}, 7ma~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Madrid: Pearson Education, 2005.
+  0.5em minus 0.4em\relax Madrid, Espa\~{n}a: Pearson Education, 2005.
 
 \bibitem{Pressman}
 R.~S. Pressman, \emph{Ingenier\'{i}a del Software, un enfoque pr\'{a}ctico}, 5ta~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Madrid: McGraw Hill, 2002.
+  0.5em minus 0.4em\relax Madrid, Espa\~{n}a: McGraw Hill, 2002.
 
 \bibitem{Baskerville}
 R.~L. Baskerville, \emph{Investigating Information Systems with Action Research}, vol~2.\hskip 1em plus
-  0.5em minus 0.4em\relax Atlanta: Association for Information Systems, 1999.
+  0.5em minus 0.4em\relax Atlanta, GA: Association for Information Systems, 1999.
+
+\bibitem{Schanda}
+J. Schanda, \emph{Colorimetry: understanding the CIE system}.\hskip 1em plus
+  0.5em minus 0.4em\relax Hoboken, New Jersey: John Wiley \& Sons, 2007.
+
+\bibitem{CIE}
+CIE, \emph{Commission Internationale de l'Eclairage, International Commission on Illumination}.\hskip 1em plus
+0.5em minus 0.4em\relax http://www.cie.co.at/index.php.
 
 \bibitem{Schwaber&Sutherland}
 K. Schwaber y J. Sutherland, \emph{Scrum guide}.\hskip 1em plus
@@ -624,14 +653,21 @@ K. Schwaber y J. Sutherland, \emph{Scrum guide}.\hskip 1em plus
 
 \bibitem{HunterLab-manual}
 \emph{Universal Software Versions 4.10 and Above User's Manual}.\hskip 1em plus
-  0.5em minus 0.4em\relax Virginia: Hunter Associates Laboratory, 2001.
+  0.5em minus 0.4em\relax Reston, Virginia: Hunter Associates Laboratory, 2001.
 
 \bibitem{MiniScanXEPlus-manual}
 \emph{MiniScan XE Plus User's Guide Version 2.4}.\hskip 1em plus
-  0.5em minus 0.4em\relax Virginia: Hunter Associates Laboratory, 2006.
+  0.5em minus 0.4em\relax Reston, Virginia: Hunter Associates Laboratory, 2006.
+
+\bibitem{Qt}
+The Qt Company, \emph{Qt, a Cross-Platform Framework for Application Development}.\hskip 1em plus
+0.5em minus 0.4em\relax https://wiki.qt.io/About\_Qt.
+
+\bibitem{VS}
+Microsoft, \emph{Visual Studio Community, a fully-featured, extensible IDE}.\hskip 1em plus
+0.5em minus 0.4em\relax https://www.visualstudio.com/products/visual-studio-community-vs
 
 \end{thebibliography}
-
 
 % that's all folks
 \end{document}
