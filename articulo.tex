@@ -363,7 +363,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Software para el Espectrofot\'{o}metro ``MiniScan XE Plus'' usado en el Diagn\'{o}stico de Patolog\'{i}as Dermatol\'{o}gicas en Pacientes}
+\title{Software para el Espectrofot\'{o}metro MiniScan XE Plus usado en el Diagn\'{o}stico de Patolog\'{i}as Dermatol\'{o}gicas en Pacientes}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -398,7 +398,7 @@ Aar\'{o}n Mu\~{n}oz\IEEEauthorrefmark{2},\IEEEauthorrefmark{3},\IEEEauthorrefmar
 
 \begin{abstract}
 %\boldmath
-El Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``\mbox{MiniScan} XE Plus'' es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), el cual ayuda a los dermat\'{o}logos a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software disponible para la utilizaci\'{o}n de dicho instrumento es poco amigable, dificil de utilizar e imposible de modificar y extender. La presente investigaci\'{o}n, a\'{u}n en avance, tiene como objetivo desarrollar un nuevo software que se ajuste a las necesidades de los dermat\'{o}logos y que garantice un mejor aprovechamiento del instrumento en cuesti\'{o}n.
+El Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado \mbox{MiniScan} XE Plus es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), el cual ayuda a los dermat\'{o}logos a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software disponible para la utilizaci\'{o}n de dicho instrumento es poco amigable, dificil de utilizar e imposible de modificar y extender. La presente investigaci\'{o}n, a\'{u}n en avance, tiene como objetivo desarrollar un nuevo software que se ajuste a las necesidades de los dermat\'{o}logos y que garantice un mejor aprovechamiento del instrumento en cuesti\'{o}n.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -425,21 +425,21 @@ El Espectrofot\'{o}metro de reflexi\'{o}n difusa denominado ``\mbox{MiniScan} XE
 \section{Introducci\'{o}n}
 % no \IEEEPARstart
 
-La Espectroscop\'{i}a de Reflectancia Difusa es una t\'{e}cnica \'{o}ptica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}. Durante el diagn\'{o}stico no invasivo no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento \cite{Bersha}.
+La Espectroscop\'{i}a de Reflectancia Difusa es una t\'{e}cnica \'{o}ptica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}. Durante el diagn\'{o}stico no invasivo no se crea ninguna ruptura en la piel y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento \cite{Bersha}.
 
-En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo \mbox{(CIMBUC)} dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa \mbox{denominado} ``MiniScan XE Plus'', creado por la empresa ``HunterLab'' \cite{HunterLab}. El CIMBUC hace uso de este instrumento a trav\'{e}s del software disponible para la utilizaci\'{o}n del mismo, designado ``HunterLab Universal Software'' \cite{HunterLab-manual}.
+En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo \mbox{(CIMBUC)} dispone de un Espectrofot\'{o}metro de reflexi\'{o}n difusa \mbox{denominado} MiniScan XE Plus, creado por la empresa HunterLab \cite{HunterLab}. El CIMBUC hace uso de este instrumento a trav\'{e}s del software disponible para la utilizaci\'{o}n del mismo, designado HunterLab Universal Software (HLUS)\cite{HunterLab-manual}.
 
-El ``HunterLab Universal Software'' es un software \mbox{comercial} y propietario que s\'{o}lo puede ejecutarse en \mbox{Sistemas} \mbox{Operativos} Windows que ya est\'{a}n obsoletos, adem\'{a}s fue \mbox{descontinuado} en el a\~{n}o 2008, por lo que no existe la posibilidad de modificarlo ni extenderlo; su interfaz gr\'{a}fica de usuario est\'{a} en idioma ingl\'{e}s y contiene m\'{a}s funcionalidades de las necesarias para manejar el instrumento en estudio, lo que lo hace poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos. Sumado al hecho de que los resultados generados por dicho software no poseen el formato con el que trabajan los dermat\'{o}logos, haciendo necesario su transcripci\'{o}n manual. 
+El HLUS es un software \mbox{comercial} y propietario que s\'{o}lo puede ejecutarse en \mbox{Sistemas} \mbox{Operativos} Windows que ya est\'{a}n obsoletos; adem\'{a}s fue \mbox{descontinuado} en el a\~{n}o 2008, por lo que no existe la posibilidad de modificarlo ni extenderlo. Su interfaz gr\'{a}fica de usuario est\'{a} en idioma ingl\'{e}s y contiene m\'{a}s funcionalidades de las necesarias para manejar el instrumento en estudio, lo que lo hace poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos. Sumado al hecho de que los resultados generados por dicho software no poseen el formato con el que trabajan los dermat\'{o}logos, haciendo necesario su transcripci\'{o}n manual. 
 
-Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el ``\mbox{HunterLab} Universal Software'', ralentizando las consultas con los pacientes, y generando la necesidad de asistencia t\'{e}cnica disponible en todo momento para su debida utilizaci\'{o}n; por \'{u}ltimo disminuye el nivel de aprovechamiento potencial del instrumento de medici\'{o}n en estudio.
+Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el \mbox{HunterLab} Universal Software, ralentizando las consultas con los pacientes, y generando la necesidad de asistencia t\'{e}cnica disponible en todo momento para su debida utilizaci\'{o}n. Por \'{u}ltimo disminuye el nivel de aprovechamiento potencial del instrumento de medici\'{o}n en estudio.
 
 Ahora bien, con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan su calidad, los cuales se resumen en Mantenibilidad, Confiabilidad, Eficiencia y Usabilidad \cite{Sommerville}.
 
-Debido a que el ``HunterLab Universal Software'' es \mbox{propietario}, su c\'{o}digo fuente no est\'{a} disponible, de manera que este software no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas, y por lo tanto no posee el primer atributo esencial para un software de calidad: la mantenibilidad; Por la misma raz\'{o}n, no se puede determinar con certidumbre el segundo atributo: la confiabilidad (madurez del software y tolerancia a fallas); adem\'{a}s de que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad del mismo. Por \'{u}ltimo la usabilidad del software existente es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
+Debido a que el HLUS es \mbox{propietario}, su c\'{o}digo fuente no est\'{a} disponible, de manera que este software no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas y por lo tanto no posee el primer atributo esencial para un software de calidad: la mantenibilidad. Por la misma raz\'{o}n, no se puede determinar con certidumbre el segundo atributo: la confiabilidad (madurez del software y tolerancia a fallas); adem\'{a}s de que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad del mismo. Por \'{u}ltimo, la usabilidad del software existente es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
 
-Teniendo en cuenta todo lo mencionado previamente, y siguiendo los lineamientos de dise\~{n}o y calidad del software que se consideran pertinentes, se est\'{a} desarrollando un \mbox{software} amigable, modificable y extensible, el cual va a ofrecer las funciones que necesitan los dermat\'{o}logos para establecer \mbox{diagn\'{o}sticos}, emplear\'{a} el formato de historia m\'{e}dica con el que trabajan, y permitir\'{a} la exportaci\'{o}n de los resultados a un formato de archivo portable. Por \'{u}ltimo, se est\'{a} creando una base sobre la cual prodr\'{a}n trabajar proyectos futuros que utilicen los resultados de este nuevo software como insumo.
+Teniendo en cuenta todo lo mencionado previamente y siguiendo los lineamientos de dise\~{n}o y calidad del software que se consideran pertinentes, se est\'{a} desarrollando un \mbox{software} amigable, modificable y extensible. Este va a ofrecer las funciones que necesitan los dermat\'{o}logos para establecer \mbox{diagn\'{o}sticos}, emplear\'{a} el formato de historia m\'{e}dica con el que trabajan, y permitir\'{a} la exportaci\'{o}n de los resultados a un formato de archivo portable. Por \'{u}ltimo, se est\'{a} creando una base sobre la cual prodr\'{a}n trabajar proyectos futuros que utilicen los resultados de este nuevo software como insumo.
 
-El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de la introducci\'{o}n, secci\'{o}n I. En la secci\'{o}n II se explican diversos conceptos fundamentales para la investigaci\'{o}n, los cuales sustentan el desarrollo de las funcionalidades que debe ofrecer el nuevo software. En la secci\'{o}n III se describe la metodolog\'{i}a de investigaci\'{i}on y la metodolog\'{i}a de desarrollo del software que se est\'{a} utilizando. En la secci\'{o}n IV se detallan los recursos y las tecnolog\'{i}as utilizadas para el desarrollo del nuevo software. Finalmente, en la secci\'{o}n V se exponen los resultados obtenidos hasta el momento y las conclusiones.
+El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de la introducci\'{o}n (secci\'{o}n I). En la secci\'{o}n II se explican diversos conceptos fundamentales para la investigaci\'{o}n, los cuales sustentan el desarrollo de las funcionalidades que debe ofrecer el nuevo software. En la secci\'{o}n III se describe la metodolog\'{i}a de investigaci\'{i}on y la metodolog\'{i}a de desarrollo del software que se est\'{a} utilizando. En la secci\'{o}n IV se detallan los recursos y las tecnolog\'{i}as utilizadas para el desarrollo del nuevo software. Finalmente, en la secci\'{o}n V se exponen los resultados obtenidos hasta el momento y las conclusiones.
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
@@ -533,18 +533,17 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 			Son coordenadas que representan los valores triest\'{i}mulo de un color, las cuales siguen el est\'{a}ndar del sistema tricrom\'{a}tico CIE 1964 \cite{CIE}. El procedimiento utilizado para calcular estas coordenadas \cite{Schanda} est\'{a} siendo implementado en el nuevo software.
 		
 		\subsubsection{Espacio CIE 1976 (L*a*b*)}
-			Es un espacio para la \mbox{transformaci\'{o}n} de coordenadas del color definido por la ``\mbox{Commission} Internationale de l'Eclairage'' \cite{CIE}, el cual emplea el uso de las coordenadas de Cromaticidad CIE 1964. Las f\'{o}rmulas definidas para el c\'{a}lculo de las coordenadas resultantes de este espacio \cite{Schanda} est\'{a}n siendo implementadas en el nuevo software, para determinar ciertas propiedades \'{o}pticas en la piel de los pacientes.
+			Es un espacio para la \mbox{transformaci\'{o}n} de coordenadas del color definido por la \mbox{Commission} Internationale de l'Eclairage \cite{CIE}, el cual emplea el uso de las coordenadas de Cromaticidad CIE 1964. Las f\'{o}rmulas definidas para el c\'{a}lculo de las coordenadas resultantes de este espacio \cite{Schanda} est\'{a}n siendo implementadas en el nuevo software, para determinar ciertas propiedades \'{o}pticas en la piel de los pacientes.
 	
 		\subsubsection{Coeficiente de Absorci\'{o}n}
-			La melanina que se encuentra distribuida en la epidermis es el  principal agente absorbente de la piel, y por lo tanto determina en gran parte el 
-color de la piel \cite{Narea}. La t\'{e}cnica empleada para recuperar el coeficiente de absorci\'{o}n en la epidermis de la piel humana \cite{Narea} est\'{a} siendo implementada en el nuevo software, para determinar el nivel de concentraci\'{o}n de melanina en la piel de los pacientes.
+			La melanina que se encuentra distribuida en la epidermis es el  principal agente absorbente de la piel y por lo tanto determina en gran parte el color de la piel \cite{Narea}. La t\'{e}cnica empleada para recuperar el coeficiente de absorci\'{o}n en la epidermis de la piel humana \cite{Narea} est\'{a} siendo implementada en el nuevo software, para determinar el nivel de concentraci\'{o}n de melanina en la piel de los pacientes.
 		
 		\subsubsection{\'{I}ndice de Eritema}
 			El objetivo de este \'{i}ndice es evaluar solamente la luz absorbida por la hemoglobina \cite{Bersha}, tomando en cuenta el coeficiente de absorci\'{o}n de la melanina \cite{Narea}. El m\'{e}todo aplicado para calcular este \'{i}ndice \cite{Bersha} est\'{a} siendo implementado en el nuevo software, para determinar el nivel de inflamaci\'{o}n en la piel de los pacientes.
 	
 	\subsection{Observaci\'{o}n Directa}		
-		\subsubsection{HunterLab Universal Software}
-			Es un software \mbox{comercial} y privativo de 16-bit dise\~{n}ado para el Sistema \mbox{Operativo} Microsoft Windows Version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000 y Windows NT (hasta Windows XP), y creado para la utilizaci\'{o}n del ``MiniScan XE Plus'', adem\'{a}s de otros instrumentos de la empresa ``HunterLab''\cite{HunterLab-manual}, el cual fue descontinuado en el a\~{n}o 2008. Este software dispone de algunas de las funcionalidades que est\'{a}n siendo desarrolladas en el nuevo software, raz\'{o}n por la cual es una referencia importante de observaci\'{o}n.
+		\subsubsection{HunterLab Universal Software (HLUS)}
+			Es un software \mbox{comercial} y privativo de 16-bit dise\~{n}ado para el Sistema \mbox{Operativo} Microsoft Windows Version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000 y Windows NT (hasta Windows XP). Creado para la utilizaci\'{o}n del \mbox{MiniScan} XE Plus, adem\'{a}s de otros instrumentos de la empresa \mbox{HunterLab} \cite{HunterLab-manual} y descontinuado en el a\~{n}o 2008. Este software dispone de algunas de las funcionalidades que est\'{a}n siendo desarrolladas en el nuevo software, raz\'{o}n por la cual es una referencia importante de observaci\'{o}n.
 
 \section{Metodolog\'{i}as}
 
@@ -562,7 +561,7 @@ color de la piel \cite{Narea}. La t\'{e}cnica empleada para recuperar el coefici
 			\begin{tabulary}{8.8cm}{|c|J|}
 				\hline
 				\thead{\textbf{Fase}} & \thead{\textbf{Actividades}}\\ \hline
-				\textbf{Diagn\'{o}stico} & Identificar los problemas y limitaciones que presenta el ``HunterLab Universal Software''.\\ \hline
+				\textbf{Diagn\'{o}stico} & Identificar los problemas y limitaciones que presenta el HLUS.\\ \hline
 				\textbf{Planificaci\'{o}n} & Seleccionar la metodolog\'{i}a de desarrollo, determinar los requisitos del software y realizar un plan de trabajo.
 \\ \hline
 				\textbf{Acci\'{o}n} & Desarrollar el nuevo software, tomando en cuenta los requisitos identificados previamente, los lineamientos de dise\~{n}o y calidad de software.\\ \hline
@@ -603,20 +602,27 @@ color de la piel \cite{Narea}. La t\'{e}cnica empleada para recuperar el coefici
 	
 	\subsection{Recursos}
 		\subsubsection{MiniScan XE Plus}
-		Es un instrumento de medici\'{o}n del color creado por la empresa ``HunterLab'', de dise\~{n}o compacto y portable \cite{MiniScanXEPlus-manual}. Este instrumento mide la cantidad de luz que refleja una muestra dentro del espectro de luz que va desde 400nm hasta 700nm, generando como resultado 31 puntos espectrales dentro de ese rango, los cuales son el insumo principal del nuevo software.
+		Es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y portable \cite{MiniScanXEPlus-manual}, el cual se puede apreciar en la Figura 1. Este instrumento mide la cantidad de luz que refleja una muestra dentro del espectro de luz que va desde 400nm hasta 700nm, generando como resultado 31 puntos espectrales dentro de ese rango, los cuales son el insumo principal del nuevo software.
+		
+		\begin{figure}[H]
+			\centering
+			\label{figura_1}
+			\includegraphics[scale=0.9]{img/MiniScanXEPlus}
+			\caption{FIGURA 1. MiniScan XE Plus}
+		\end{figure}
 		
 		\subsubsection{Adaptador RS232-USB}
-			Es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que emplean puerto Serial con computadoras con puertos USB, creando puertos COM virtuales dichas computadoras mientras se realiza la comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 Hembra a \mbox{RJ-45} del ``MiniScan XE Plus'' \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto Serial.
+			Es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que emplean puerto Serial con computadoras con puertos USB, creando puertos COM virtuales con dichas computadoras mientras se realiza la comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 Hembra a \mbox{RJ-45} del MiniScan XE Plus \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto Serial.
 		
 		\subsubsection{MiniScan XE Plus OCX Kit}
-			Es un archivo dise\~{n}ado por la empresa ``HunterLab'' para controlar y/o realizar mediciones con el ``MiniScan XE Plus''. Su objetivo es proveer a los desarrolladores con un componente reutilizable de software que da acceso a las caracteristicas m\'{a}s comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.		
+			Es un archivo dise\~{n}ado por la empresa HunterLab para controlar y/o realizar mediciones con el MiniScan XE Plus. Su objetivo es proveer a los desarrolladores con un componente reutilizable de software que da acceso a las caracteristicas m\'{a}s comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.		
 	
 	\subsection{Tecnolog\'{i}as}
 		\subsubsection{Qt}
 			Es un framework de desarrollo de aplicaciones multiplataforma para sistemas de escritorio, sistemas integrados y sistemas m\'{o}viles \cite{Qt}. Se est\'{a} utilizando la versi\'{o}n Open Source de este framework para el desarrollo del nuevo software.
 			
 		\subsubsection{Visual Studio}
-			Es un entorno integrado de desarrollo (IDE) para crear aplicaciones en varias plataformas como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este IDE para desarrollar una librer\'{i}a escrita en Visual Basic .NET, la cual act\'{u}a como intermediaria entre el OCX Kit y el framework Qt, para as\'{i} utilizar las caracter\'{i}sticas del ``MiniScan XE Plus'' junto con el nuevo software.
+			Es un entorno integrado de desarrollo (IDE) para crear aplicaciones en varias plataformas como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este IDE para desarrollar una librer\'{i}a escrita en Visual Basic .NET, la cual act\'{u}a como intermediaria entre el OCX Kit y el framework Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus junto con el nuevo software.
 
 		\subsubsection{QCustomPlot}
 			Es un widget de Qt C++ para el trazado y visualizaci\'{o}n de datos \cite{QCustomPlot}. Este widget est\'{a} siendo empleado por el nuevo software para visualizar la Curva de Reflectancia Difusa y la Curva de Absorbancia Aparente asociadas a los 31 puntos espectrales.
@@ -624,38 +630,45 @@ color de la piel \cite{Narea}. La t\'{e}cnica empleada para recuperar el coefici
 \section{Resultados y Conclusiones}
 	
 	\subsection{Resultados}
-	Por medio del cable adaptador RS232-USB y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el software que est\'{a} siendo desarrollado en Qt y el ``MiniScan XE Plus'', por medio del ``MiniScan XE Plus OCX Kit''. Hasta el momento, el nuevo software en desarrollo es capaz de conectar el ``MiniScan XE Plus'', desconectarlo, estandarizarlo (empleando una
+	
+	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el nuevo software, se recurri\'{o} a la documentaci\'{o}n del instrumento, donde se describe el MiniScan XE Plus OCX Kit \cite{MiniScanXEPlus-manual}, un archivo que expone una interfaz con las funciones m\'{a}s comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de la empresa HunterLab por correo electr\'{o}nico, solicitando el c\'{o}digo fuente de dicho archivo y toda la documentaci\'{o}n adicional relativa a su utilizaci\'{o}n que pudieran proporcionar para la investigaci\'{o}n.
+	
+	Si bien el personal no comparti\'{o} el c\'{o}digo fuente que se solicit\'{o}, s\'{i} enviaron documentaci\'{o}n detallada de la utilizaci\'{o}n del archivo y un ejemplo de su uso escrito en Visual Basic for Applications (VBA). Primero se intent\'{o} cargar el archivo directamente y utilizarlo empleando una librer\'{i}a de Qt para el manejo de controles ActiveX, sin embargo ocurr\'{i}a un error de compatibilidad de datos al llamar algunas de sus funciones. La soluci\'{o}n a este problema fue desarrollar una librer\'{i}a escrita en Visual Basic.NET, con la cual se pueden llamar a todas las funciones de este archivo sin problema alguno.
+
+	As\'{i} pues, por medio del cable adaptador RS232-USB y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el software que est\'{a} siendo desarrollado en Qt y el MiniScan XE Plus, por medio del MiniScan XE Plus OCX Kit. Hasta el momento, el nuevo software en desarrollo es capaz de conectar el MiniScan XE Plus, desconectarlo, estandarizarlo (empleando una
 trampa de luz y una baldosa de cer\'{a}mica blanca), realizar la medici\'{o}n de una muestra, y por \'{u}ltimo representar los 31 puntos espectrales obtenidos de la medici\'{o}n en una de Curva de Reflectancia Difusa.
 	
-	En la Figura 1 se puede visualizar la funcionalidad de visualizaci\'{o}n de la Curva de Reflectancia Difusa en el ``HunterLab Unirversal Software'', en donde se puede apreciar que el dise\~{n}o de la interfaz gr\'{a}fica de usuario est\'{a} obsoleto, dicha interfaz est\'{a} en idioma ingl\'{e}s, y la visualizaci\'{o}n de la curva no resalta los 31 puntos espectrales, ni muestra con exactitud cada uno de los valores de longitud de onda y porcentajes de reflectancia que representan.
+	En la Figura 2 se puede visualizar la funcionalidad de visualizaci\'{o}n de la Curva de Reflectancia Difusa en el HLUS, en donde se puede apreciar que el dise\~{n}o de la interfaz gr\'{a}fica de usuario est\'{a} obsoleto. Dicha interfaz est\'{a} en idioma ingl\'{e}s y la visualizaci\'{o}n de la curva no resalta los 31 puntos espectrales, ni muestra con exactitud cada uno de los valores de longitud de onda y porcentajes de reflectancia que representan.
 	
-	Ahora bien, en la Figura 2 se puede observar la funcionalidad de visualizaci\'{o}n de la Curva de Reflectancia Difusa del nuevo software en desarrollo, a partir de los 31 puntos espectrales. En contraste con las observaciones realizadas al ``HunterLab Universal Software'' en la Figura 1, la interfaz gr\'{a}fica de usuario del nuevo software posee un dise\~{n}o actual, est\'{a} en idioma espa\~{n}ol, y por \'{u}ltimo resalta los 31 puntos espectrales, mostrando con exactitud los 31 valores de longitud de onda y los porcentajes de reflectancia que representan.
+	Ahora bien, en la Figura 3 se puede observar la funcionalidad de visualizaci\'{o}n de la Curva de Reflectancia Difusa del nuevo software en desarrollo, a partir de los 31 puntos espectrales. En contraste con las observaciones realizadas al HLUS en la Figura 2, la interfaz gr\'{a}fica de usuario del nuevo software posee un dise\~{n}o actual, est\'{a} en idioma espa\~{n}ol, y por \'{u}ltimo resalta los 31 puntos espectrales, mostrando con exactitud los 31 valores de longitud de onda y los porcentajes de reflectancia que representan.
+	
+	Por \'{u}ltimo, este nuevo software ser\'{a} modificable y extensible, razones por las cuales ser\'{a} un software libre, por lo que permitir\'{a} agregar, modificar y quitar funcionalidades. Lo mismo se aplicar\'{a} para la librer\'{i}a que intermedia la comunicaci\'{o}n con el MiniScanXE Plus OCX Kit.
 	
 		\begin{figure}[H]
 			\centering
-			\label{figura_1}
+			\label{figura_2}
 			\includegraphics[scale=0.56]{img/HunterLabSoftware}
-			\caption{FIGURA 1. Curva de Reflectancia del HunterLab Universal Software}
+			\caption{FIGURA 2. Curva de Reflectancia del HunterLab Universal Software}
 		\end{figure}
 	
 		\begin{figure}[H]
 			\centering
-			\label{figura_1}
+			\label{figura_3}
 			\includegraphics[scale=0.37]{img/nuevoSoftware}
-			\caption{FIGURA 2. Curva de Reflectancia del software en desarrollo}
+			\caption{FIGURA 3. Curva de Reflectancia del software en desarrollo}
 		\end{figure}
 	
 	\subsection{Conclusiones}
-	Si bien el nuevo software est\'{a} en una fase temprana de desarrollo, se puede apreciar que provee de informaci\'{o}n m\'{a}s detallada sobre la Curva de Reflectancia Difusa, en comparaci\'{o}n con el ``HunterLab Universal Software'', lo que sumado al resto de las funcionalidades ser\'{a} de gran utilidad para los estudios dermatol\'{o}gicos. Adem\'{a}s, el empleo del Framework Qt en el desarrollo del nuevo software permite su ejecuci\'{o}n en Sistemas Operativos Windows actuales, lo que garantiza su posibilidad de uso en los equipos disponibles en el CIMBUC.
+	Si bien el nuevo software est\'{a} en una fase temprana de desarrollo, se puede apreciar que provee de informaci\'{o}n m\'{a}s detallada sobre la Curva de Reflectancia Difusa, en comparaci\'{o}n con el HLUS, lo que sumado al resto de las funcionalidades ser\'{a} de gran utilidad para los estudios dermatol\'{o}gicos. Adem\'{a}s, el empleo del Framework Qt en el desarrollo del nuevo software permite su ejecuci\'{o}n en Sistemas Operativos Windows actuales, lo que garantiza su posibilidad de uso en los equipos disponibles en el CIMBUC.
 
-	En definitiva, se concluye que el nuevo software cumplir\'{a} con el objetivo de ajustarse a las necesidades de los dermat\'{o}logos y dem\'{a}s investigadores, as\'{i} como garantizar un mejor aprovechamiento del ``MiniScan XE Plus''.
+	En definitiva, se concluye que el nuevo software cumplir\'{a} con el objetivo de ajustarse a las necesidades de los dermat\'{o}logos y dem\'{a}s investigadores, as\'{i} como garantizar un mejor aprovechamiento del MiniScan XE Plus.
 % conference papers do not normally have an appendix
 
 \newpage
 
 % use section* for acknowledgement
 \section*{Agradecimientos}
-	Este trabajo de investigaci\'{o}n se est\'{a} llevando a cabo gracias a la tutor\'{i}a de los profesores Harold Vasquez y Patricia \mbox{Guerrero}, la orientaci\'{o}n del profesor Freddy Narea, la colaboraci\'{o}n del profesor Aar\'{o}n Mu\~{n}oz, y a todo el equipo de investigadores que hace vida en el CIMBUC.
+	Este trabajo de investigaci\'{o}n se est\'{a} llevando a cabo gracias a la tutor\'{i}a de los profesores Harold Vasquez y Patricia \mbox{Guerrero}, la orientaci\'{o}n del profesor Freddy Narea, la colaboraci\'{o}n del profesor Aar\'{o}n Mu\~{n}oz, a todo el equipo de investigadores que hace vida en el CIMBUC, y finalmente a la ayuda proporcionada por el personal de soporte t\'{e}cnico de HunterLab.
 	
 	\textit{``El hombre encuentra a Dios detr\'{a}s de cada puerta que la ciencia logra abrir''} - Albert Einstein.
 
@@ -663,7 +676,7 @@ trampa de luz y una baldosa de cer\'{a}mica blanca), realizar la medici\'{o}n de
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
 % the document is modified later
-\IEEEtriggeratref{6}
+%\IEEEtriggeratref{6}
 % The "triggered" command can be changed if desired:
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
