@@ -619,7 +619,7 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		\subsubsection{Adaptador RS232-USB}
 			es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que emplean puerto serial con computadoras con puertos USB, creando puertos COM virtuales con dichas computadoras mientras se realiza la comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a \mbox{RJ-45} del MiniScan XE Plus \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
 		
-		\subsubsection{MiniScan XE Plus OCX Kit}
+		\subsubsection{MiniScan XE Plus OCX Kit (MSXE.ocx)}
 			es un archivo dise\~{n}ado por la empresa HunterLab para controlar y/o realizar mediciones con el MiniScan XE Plus. Su objetivo es proveer a los desarrolladores con un componente reutilizable de software que da acceso a las caracteristicas comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.		
 	
 	\subsection{Tecnolog\'{i}as}
@@ -627,7 +627,7 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 			es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas de escritorio, sistemas integrados y sistemas m\'{o}viles \cite{Qt}. Se est\'{a} utilizando la versi\'{o}n Open Source de este \textit{framework} para el desarrollo del nuevo software.
 			
 		\subsubsection{Visual Studio}
-			es un entorno integrado de desarrollo (IDE) para crear aplicaciones en varias plataformas, como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este IDE para desarrollar una librer\'{i}a escrita en Visual Basic .NET, que act\'{u}a como intermediaria entre el OCX Kit y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus junto con el nuevo software.
+			es un entorno integrado de desarrollo (IDE) para crear aplicaciones en varias plataformas, como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este IDE para desarrollar una librer\'{i}a escrita en Visual Basic .NET, que act\'{u}a como intermediaria entre el archivo MSXE.ocx y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus junto con el nuevo software.
 
 		\subsubsection{QCustomPlot}
 			es un \textit{widget} de Qt para el trazado y visualizaci\'{o}n de datos \cite{QCustomPlot}. Este \textit{widget} est\'{a} siendo empleado por el nuevo software para visualizar la curva de reflectancia difusa y la curva de absorbancia aparente asociadas a los 31 puntos espectrales.
@@ -636,17 +636,17 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 	
 	\subsection{Resultados}
 	
-	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el nuevo software, se recurri\'{o} a la documentaci\'{o}n del instrumento, en la cual se describe el MiniScan XE Plus OCX Kit \cite{MiniScanXEPlus-manual}, que es un archivo que implementa las funciones comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de HunterLab por correo electr\'{o}nico, para solicitarle el c\'{o}digo fuente de dicho archivo y la documentaci\'{o}n relativa a su utilizaci\'{o}n que se pudiera proporcionar para la investigaci\'{o}n.
+	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el nuevo software, se recurri\'{o} a la documentaci\'{o}n del instrumento, en la cual se describe el MSXE.ocx \cite{MiniScanXEPlus-manual}, que es un archivo que implementa las funciones comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de HunterLab por correo electr\'{o}nico, para solicitarle el c\'{o}digo fuente de dicho archivo y la documentaci\'{o}n relativa a su utilizaci\'{o}n que se pudiera proporcionar para la investigaci\'{o}n.
 	
 	Si bien el personal no comparti\'{o} el c\'{o}digo fuente del archivo, s\'{i} envi\'{o} la documentaci\'{o}n solicitada y un ejemplo de su uso escrito en Visual Basic for Applications (VBA). Primero se intent\'{o} cargar el archivo y utilizarlo directamente en Qt; sin embargo, ocurr\'{i}a un error de compatibilidad de datos al invocar algunas de sus funciones. La soluci\'{o}n a este problema fue desarrollar una librer\'{i}a escrita en Visual Basic.NET, con la cual se pueden invocar todas las funciones de este archivo sin problema alguno.
 
-	As\'{i} pues, por medio del cable adaptador RS232-USB, y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el software que est\'{a} siendo desarrollado en Qt y el MiniScan XE Plus, por medio del MiniScan XE Plus OCX Kit. Hasta el momento, el nuevo software en desarrollo es capaz de conectar el MiniScan XE Plus, desconectarlo, estandarizarlo (empleando una trampa de luz y una baldosa de cer\'{a}mica blanca), realizar la medici\'{o}n de una muestra, y, por \'{u}ltimo, representar los 31 puntos espectrales obtenidos de la medici\'{o}n en una de curva de reflectancia difusa.
+	As\'{i} pues, por medio del cable adaptador RS232-USB, y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el software que est\'{a} siendo desarrollado en Qt y el MiniScan XE Plus, por medio del archivo MSXE.ocx. Hasta el momento, el nuevo software en desarrollo es capaz de conectar el MiniScan XE Plus, desconectarlo, estandarizarlo (empleando una trampa de luz y una baldosa de cer\'{a}mica blanca), realizar la medici\'{o}n de una muestra, y, por \'{u}ltimo, representar los 31 puntos espectrales obtenidos de la medici\'{o}n en una de curva de reflectancia difusa.
 	
 	En la Figura 2 se puede apreciar la funci\'{o}n de visualizaci\'{o}n de la curva de reflectancia difusa en el HLUS, en donde se puede apreciar que el dise\~{n}o de la interfaz gr\'{a}fica de usuario es obsoleto. Dicha interfaz est\'{a} en ingl\'{e}s y la visualizaci\'{o}n de la curva no resalta los 31 puntos espectrales ni muestra con exactitud cada uno de los valores de longitud de onda, ni los porcentajes de reflectancia que representan.
 	
 	Ahora bien, en la Figura 3 se puede observar la funci\'{o}n de visualizaci\'{o}n de la curva de reflectancia difusa del nuevo software en desarrollo, a partir de los 31 puntos espectrales. En contraste con las observaciones realizadas al HLUS en la Figura 2, la interfaz gr\'{a}fica de usuario del nuevo software posee un dise\~{n}o actual, est\'{a} en espa\~{n}ol, y por \'{u}ltimo resalta los 31 puntos espectrales, mostrando con exactitud los 31 valores de longitud de onda y los porcentajes de reflectancia que representan.
 	
-	Por \'{u}ltimo, este nuevo software ser\'{a} modificable y extensible, razones por las cuales ser\'{a} un software libre y, por ende, permitir\'{a} agregar, modificar y quitar funciones. Lo mismo se aplicar\'{a} para la librer\'{i}a que intermedia en la comunicaci\'{o}n con el MiniScanXE Plus OCX Kit.
+	Por \'{u}ltimo, este nuevo software ser\'{a} modificable y extensible, razones por las cuales ser\'{a} un software libre y, por ende, permitir\'{a} agregar, modificar y quitar funciones. Lo mismo se aplicar\'{a} para la librer\'{i}a que intermedia en la comunicaci\'{o}n con el MSXE.ocx.
 	
 		\begin{figure}[H]
 			\centering
