@@ -541,7 +541,11 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		\subsubsection{\'{I}ndice de Eritema}
 			El objetivo de este \'{i}ndice es evaluar solamente la luz absorbida por la hemoglobina \cite{Bersha}, tomando en cuenta el coeficiente de absorci\'{o}n de la melanina \cite{Narea}. El m\'{e}todo aplicado para calcular este \'{i}ndice \cite{Bersha} est\'{a} siendo implementado en el nuevo software, para determinar el nivel de inflamaci\'{o}n en la piel de los pacientes.
 	
-	\subsection{Observaci\'{o}n Directa}		
+	\subsection{Observaci\'{o}n Directa}
+		
+		\subsubsection{Archivo de ejemplo MSXE + OCX}
+		Es una hoja de c\'{a}lculos habilitada para la ejecuci\'{o}n de macros de Microsoft Excel, la cual fue proporcionada por el personal de soporte t\'{e}cnico de HunterLab \cite{HunterLab} como un ejemplo para la utilizaci\'{o}n del MiniScan XE Plus sin necesidad de emplear el HLUS. El c\'{o}digo que contiene este archivo se est\'{a} utilizando como referencia para establecer la comunicaci\'{o}n entre el nuevo software y el instrumento en cuesti\'{o}n.
+			
 		\subsubsection{HunterLab Universal Software (HLUS)}
 			Es un software \mbox{comercial} y privativo de 16-bit dise\~{n}ado para el Sistema \mbox{Operativo} Microsoft Windows Version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000 y Windows NT (hasta Windows XP). Creado para la utilizaci\'{o}n del \mbox{MiniScan} XE Plus, adem\'{a}s de otros instrumentos de la empresa \mbox{HunterLab} \cite{HunterLab-manual} y descontinuado en el a\~{n}o 2008. Este software dispone de algunas de las funcionalidades que est\'{a}n siendo desarrolladas en el nuevo software, raz\'{o}n por la cual es una referencia importante de observaci\'{o}n.
 
@@ -631,9 +635,9 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 	
 	\subsection{Resultados}
 	
-	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el nuevo software, se recurri\'{o} a la documentaci\'{o}n del instrumento, donde se describe el MiniScan XE Plus OCX Kit \cite{MiniScanXEPlus-manual}, un archivo que expone una interfaz con las funciones m\'{a}s comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de la empresa HunterLab por correo electr\'{o}nico, solicitando el c\'{o}digo fuente de dicho archivo y toda la documentaci\'{o}n adicional relativa a su utilizaci\'{o}n que pudieran proporcionar para la investigaci\'{o}n.
+	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el nuevo software, se recurri\'{o} a la documentaci\'{o}n del instrumento, donde se describe el MiniScan XE Plus OCX Kit \cite{MiniScanXEPlus-manual}, un archivo que implementa las funciones m\'{a}s comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de HunterLab por correo electr\'{o}nico, solicitando el c\'{o}digo fuente de dicho archivo y la documentaci\'{o}n relativa a su utilizaci\'{o}n que se pudiera proporcionar para la investigaci\'{o}n.
 	
-	Si bien el personal no comparti\'{o} el c\'{o}digo fuente que se solicit\'{o}, s\'{i} enviaron documentaci\'{o}n detallada de la utilizaci\'{o}n del archivo y un ejemplo de su uso escrito en Visual Basic for Applications (VBA). Primero se intent\'{o} cargar el archivo directamente y utilizarlo empleando una librer\'{i}a de Qt para el manejo de controles ActiveX, sin embargo ocurr\'{i}a un error de compatibilidad de datos al llamar algunas de sus funciones. La soluci\'{o}n a este problema fue desarrollar una librer\'{i}a escrita en Visual Basic.NET, con la cual se pueden llamar a todas las funciones de este archivo sin problema alguno.
+	Si bien el personal no comparti\'{o} el c\'{o}digo fuente del archivo, s\'{i} envi\'{o} la documentaci\'{o}n solicitada y un ejemplo de su uso escrito en Visual Basic for Applications (VBA). Primero se intent\'{o} cargar el archivo y utilizarlo directamente en Qt, sin embargo ocurr\'{i}a un error de compatibilidad de datos al llamar algunas de sus funciones. La soluci\'{o}n a este problema fue desarrollar una librer\'{i}a escrita en Visual Basic.NET, con la cual se pueden llamar a todas las funciones de este archivo sin problema alguno.
 
 	As\'{i} pues, por medio del cable adaptador RS232-USB y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el software que est\'{a} siendo desarrollado en Qt y el MiniScan XE Plus, por medio del MiniScan XE Plus OCX Kit. Hasta el momento, el nuevo software en desarrollo es capaz de conectar el MiniScan XE Plus, desconectarlo, estandarizarlo (empleando una
 trampa de luz y una baldosa de cer\'{a}mica blanca), realizar la medici\'{o}n de una muestra, y por \'{u}ltimo representar los 31 puntos espectrales obtenidos de la medici\'{o}n en una de Curva de Reflectancia Difusa.
@@ -663,8 +667,6 @@ trampa de luz y una baldosa de cer\'{a}mica blanca), realizar la medici\'{o}n de
 
 	En definitiva, se concluye que el nuevo software cumplir\'{a} con el objetivo de ajustarse a las necesidades de los dermat\'{o}logos y dem\'{a}s investigadores, as\'{i} como garantizar un mejor aprovechamiento del MiniScan XE Plus.
 % conference papers do not normally have an appendix
-
-\newpage
 
 % use section* for acknowledgement
 \section*{Agradecimientos}
