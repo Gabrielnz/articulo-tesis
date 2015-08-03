@@ -530,19 +530,17 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 \section{Bases Te\'{o}ricas}
 
 	\subsection{Antecedentes}
-		\subsubsection{Coordenadas de cromaticidad y espacio CIE (L*a*b*)}
-			las coordenadas de cromaticidad \textit{CIE XYZ} definidas en 1964 representan los valores triest\'{i}mulo de un color, siguiendo el est\'{a}ndar definido por la \textit{\mbox{Commission} Internationale de l'Eclairage} \textit{(CIE)}\cite{CIE}; el espacio \textit{CIE L*a*b*} es un sistema para la \mbox{transformaci\'{o}n} de tales coordenadas a un espacio de tres dimensiones, definido tambi\'{e}n por la \textit{CIE} en 1976. Los procedimientos empleados para el c\'{a}lculo de las coordenadas y del espacio de transformaci\'{o}n definidos \cite{Schanda}, est\'{a}n siendo implementados en el nuevo software para determinar ciertos par\'{a}metros \'{o}pticos presentes en la piel de los pacientes.
-	
-		\subsubsection{Coeficiente de absorci\'{o}n}
-			la melanina que se encuentra distribuida en la epidermis es el  principal agente absorbente de la piel, y, por lo tanto, determina en gran parte el color de la misma \cite{Narea}. La t\'{e}cnica empleada para recuperar el coeficiente de absorci\'{o}n en la epidermis de la piel humana \cite{Narea} est\'{a} siendo implementada en el nuevo software, para determinar el nivel de concentraci\'{o}n de melanina en la piel de los pacientes.
 		
 		\subsubsection{\'{I}ndice de eritema}
-			el objetivo de este \'{i}ndice es evaluar solamente la luz absorbida por la hemoglobina \cite{Bersha}, tomando en cuenta el coeficiente de absorci\'{o}n de la melanina \cite{Narea}. El m\'{e}todo aplicado para calcular este \'{i}ndice \cite{Bersha} est\'{a} siendo implementado en el nuevo software, para determinar el nivel de inflamaci\'{o}n en la piel de los pacientes.
+		este \'{i}ndice es utilizado para determinar el nivel inflamatorio de la epidermis en la piel de un paciente. El m\'{e}todo aplicado para calcular este \'{i}ndice \cite{Wagner} est\'{a} siendo implementado en el nuevo software.
+		
+		\subsubsection{Coeficiente de absorci\'{o}n de la epidermis}
+			 su objetivo es indicar el nivel de concentraci\'{o}n de melanina presente en la epidermis de la piel de un paciente. La t\'{e}cnica empleada para recuperar este coeficiente \cite{Narea} est\'{a} siendo implementada en el nuevo software.
 	
 	\subsection{Observaci\'{o}n Directa}
 		
-		\subsubsection{Archivo de ejemplo MSXE + OCX}
-		es una hoja de c\'{a}lculo habilitada para la ejecuci\'{o}n de macroinstrucciones de Microsoft Excel, que fue proporcionada por el personal de soporte t\'{e}cnico de HunterLab \cite{HunterLab} como un ejemplo para la utilizaci\'{o}n del MiniScan XE Plus, sin necesidad de emplear el HLUS. El c\'{o}digo que contiene este archivo se est\'{a} utilizando como referencia para establecer la comunicaci\'{o}n entre el nuevo software y el instrumento en cuesti\'{o}n.
+		\subsubsection{Archivo MSXE + OCX}
+		es una hoja de c\'{a}lculo habilitada para la ejecuci\'{o}n de macroinstrucciones de Microsoft Excel, que fue proporcionada por el personal de soporte t\'{e}cnico de HunterLab \cite{HunterLab} como un ejemplo para para dar acceso a las caracteristicas comunmente utilizadas por el MiniScan XE Plus, por medio de un kit de control denominado \textit{MSXE.ocx}. El c\'{o}digo contenido en este archivo se est\'{a} empleando como referencia para observar el manejo del kit \textit{MSXE.ocx}.
 			
 		\subsubsection{HunterLab Universal Software (HLUS)}
 			es un software \mbox{comercial} y privativo de 16 bits dise\~{n}ado para el sistema \mbox{operativo} Microsoft Windows version 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 2000 y Windows XP. Fue creado para la utilizaci\'{o}n del \mbox{MiniScan} XE Plus, adem\'{a}s de otros instrumentos de la empresa \mbox{HunterLab} \cite{HunterLab-manual}, y descontinuado en el a\~{n}o 2008. Este software dispone de algunas de las funciones que est\'{a}n siendo desarrolladas en el nuevo software, raz\'{o}n por la cual es una referencia importante de observaci\'{o}n.
@@ -550,12 +548,11 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 \section{Metodolog\'{i}as}
 
 	\subsection{Investigaci\'{o}n-Acci\'{o}n}
-		Es un m\'{e}todo de investigaci\'{o}n que a finales de la d\'{e}cada de los 90 empez\'{o} a crecer en popularidad, para el uso en investigaciones acad\'{e}micas de sistemas de informaci\'{o}n. Este m\'{e}todo produce resultados de investigaci\'{o}n altamente relevantes, debido a que se fundamenta en la acci\'{o}n pr\'{a}ctica, dirigida a resolver un problema mientras se informa cuidadosamente sobre la teor\'{i}a \cite{Baskerville}.
+		Es un m\'{e}todo de investigaci\'{o}n que produce resultados altamente relevantes, debido a que se fundamenta en la acci\'{o}n pr\'{a}ctica, dirigida a resolver un problema mientras se informa cuidadosamente sobre la teor\'{i}a \cite{Baskerville}.
 		
-		Las actividades de la investigaci\'{o}n se est\'{a}n realizando seg\'{u}n la representaci\'{o}n m\'{a}s habitual de la Investigaci\'{o}n-Acci\'{o}n \cite{Baskerville}. Dicha representaci\'{o}n se compone de cinco fases, que son descritas en la Tabla 1.
+		Las actividades de la investigaci\'{o}n se est\'{a}n realizando seg\'{u}n la representaci\'{o}n m\'{a}s habitual de la Investigaci\'{o}n-Acci\'{o}n \cite{Baskerville}, la cual es descrita en la Tabla 1.
 		
 		\FloatBarrier %you shall not pass table!!
-		\vfill
 		\begin{table}[htb]
 			\caption{TABLA 1. Actividades del proyecto, seg\'{u}n la Investigaci\'{o}n-Acci\'{o}n}
 			\label{tabla_1}
@@ -572,16 +569,14 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 				\textbf{Reflexi\'{o}n} & Presentar los resultados y los an\'{a}lisis de las pruebas realizadas.\\ \hline
 			\end{tabulary}
 		\end{table}
-		\vfill
 		\FloatBarrier %you shall not pass table!!
 
 	\subsection{SCRUM}
-		Es un marco de trabajo de procesos que ha sido usado para gestionar el desarrollo de productos complejos desde principios de los a\~{n}os 90. En este marco de trabajo, se pueden emplear varias t\'{e}cnicas y procesos. SCRUM muestra la eficacia relativa de las pr\'{a}cticas de gesti\'{o}n de productos y las pr\'{a}cticas de desarrollo \cite{Schwaber&Sutherland}.
+		Es un marco de trabajo de procesos utilizado para gestionar el desarrollo de productos complejos. En este marco de trabajo, se pueden emplear varias t\'{e}cnicas y procesos. SCRUM muestra la eficacia relativa de las pr\'{a}cticas de gesti\'{o}n de productos y las pr\'{a}cticas de desarrollo \cite{Schwaber&Sutherland}.
 
 		Adicionalmente a la utilizaci\'{o}n de la metodolog\'{i}a SCRUM, se est\'{a}n incluyendo algunos artefactos de la metodolog\'{i}a RUP \cite{Kroll&Kruchten}, para as\'{i} generar suficiente documentaci\'{o}n durante el dise\~{n}o y el desarrollo del nuevo software. La configuraci\'{o}n de la metodolog\'{i}a SCRUM, en conjunto con los artefactos seleccionados de la metodolog\'{i}a RUP, se ilustra en la \mbox{Tabla 2}.
 		
 		\FloatBarrier %you shall not pass table!!
-		\vfill
 		\begin{table}[htb]
 			\caption{TABLA 2. Configuraci\'{o}n de los artefactos a utilizar de SCRUM y RUP}
 			\label{tabla_2}
@@ -601,7 +596,6 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		\textbf{Diagrama de casos de uso: }muestra los procesos del negocio que son proporcionados para los actores del negocio.\\ \hline
 			\end{tabulary}
 		\end{table}
-		\vfill
 		\FloatBarrier %you shall not pass table!!
 
 \section{Recursos y Tecnolog\'{i}as}	
@@ -610,17 +604,15 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		\subsubsection{MiniScan XE Plus}
 		es un instrumento de medici\'{o}n del color, creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til \cite{MiniScanXEPlus-manual}, que emplea la t\'{e}cnica de ERD, y el cual se puede apreciar en la Figura 1. Este instrumento mide la cantidad de luz que refleja una muestra dentro del espectro de luz que va desde 400 hasta 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del nuevo software.
 		
-		\vfill
+		\subsubsection{Adaptador RS232-USB}
+			es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que emplean puerto serial con computadoras con puertos USB, creando puertos COM virtuales con dichas computadoras mientras se realiza la comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a \mbox{RJ-45} del MiniScan XE Plus \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
+
 		\begin{figure}[H]
 			\centering
 			\label{figura_1}
 			\includegraphics[scale=0.9]{img/MiniScanXEPlus}
 			\caption{FIGURA 1. MiniScan XE Plus}
 		\end{figure}
-		\vfill
-		
-		\subsubsection{Adaptador RS232-USB}
-			es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que emplean puerto serial con computadoras con puertos USB, creando puertos COM virtuales con dichas computadoras mientras se realiza la comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a \mbox{RJ-45} del MiniScan XE Plus \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
 		
 		\subsubsection{MiniScan XE Plus OCX Kit (MSXE.ocx)}
 			es un archivo dise\~{n}ado por la empresa HunterLab para controlar y/o realizar mediciones con el MiniScan XE Plus. Su objetivo es proveer a los desarrolladores con un componente reutilizable de software que da acceso a las caracteristicas comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.		
@@ -650,7 +642,13 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 	Ahora bien, en la Figura 3 se puede observar la funci\'{o}n de visualizaci\'{o}n de la curva de reflectancia difusa del nuevo software en desarrollo, a partir de los 31 puntos espectrales. En contraste con las observaciones realizadas al HLUS en la Figura 2, la interfaz gr\'{a}fica de usuario del nuevo software posee un dise\~{n}o actual, est\'{a} en espa\~{n}ol, y por \'{u}ltimo resalta los 31 puntos espectrales, mostrando con exactitud los 31 valores de longitud de onda y los porcentajes de reflectancia que representan.
 	
 	Por \'{u}ltimo, este nuevo software ser\'{a} modificable y extensible, razones por las cuales ser\'{a} un software libre y, por ende, permitir\'{a} agregar, modificar y quitar funciones. Lo mismo se aplicar\'{a} para la librer\'{i}a que intermedia en la comunicaci\'{o}n con el MSXE.ocx.
-		
+	
+	\subsection{Conclusiones}
+	Si bien el nuevo software est\'{a} en una fase temprana de desarrollo, en comparaci\'{o}n con el HLUS se puede apreciar que provee de informaci\'{o}n m\'{a}s detallada sobre la curva de reflectancia difusa, lo que sumado al resto de las funciones ser\'{a} de gran utilidad para los estudios dermatol\'{o}gicos. Adem\'{a}s, el empleo del \textit{framework} Qt en el desarrollo del nuevo software permite su ejecuci\'{o}n en sistemas operativos Windows actuales, lo que garantiza su uso en los equipos disponibles en el CIMBUC.
+
+	En definitiva, se concluye que el nuevo software cumplir\'{a} con el objetivo de ajustarse a las necesidades de los dermat\'{o}logos y dem\'{a}s investigadores, y garantizar\'{a} un mejor aprovechamiento del MiniScan XE Plus.
+% conference papers do not normally have an appendix
+
 		\begin{figure}[H]
 			\centering
 			\label{figura_2}
@@ -664,12 +662,6 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 			\includegraphics[scale=0.37]{img/nuevoSoftware}
 			\caption{FIGURA 3. Curva de reflectancia del software en desarrollo}
 		\end{figure}
-	
-	\subsection{Conclusiones}
-	Si bien el nuevo software est\'{a} en una fase temprana de desarrollo, en comparaci\'{o}n con el HLUS se puede apreciar que provee de informaci\'{o}n m\'{a}s detallada sobre la curva de reflectancia difusa, lo que sumado al resto de las funciones ser\'{a} de gran utilidad para los estudios dermatol\'{o}gicos. Adem\'{a}s, el empleo del \textit{framework} Qt en el desarrollo del nuevo software permite su ejecuci\'{o}n en sistemas operativos Windows actuales, lo que garantiza su uso en los equipos disponibles en el CIMBUC.
-
-	En definitiva, se concluye que el nuevo software cumplir\'{a} con el objetivo de ajustarse a las necesidades de los dermat\'{o}logos y dem\'{a}s investigadores, y garantizar\'{a} un mejor aprovechamiento del MiniScan XE Plus.
-% conference papers do not normally have an appendix
 
 % use section* for acknowledgement
 \section*{Agradecimientos}
@@ -728,6 +720,10 @@ CIE, \emph{Commission Internationale de l'Eclairage, International Commission on
 \bibitem{Schanda}
 J. Schanda, \emph{Colorimetry: understanding the CIE system}.\hskip 1em plus
   0.5em minus 0.4em\relax Hoboken, New Jersey: John Wiley \& Sons, 2007.
+
+\bibitem{Wagner}
+J. Wagner et al., \emph{Comparing Quantitative Measures of Erythema, Pigmentation and Skin Response using Reflectometry}.\hskip 1em plus
+  0.5em minus 0.4em\relax Pigment Cell Res, 2002.
 
 \bibitem{Narea}
 F. Narea et al., \emph{Recuperaci\'{o}n del coeficiente de absorci\'{o}n de la epidermis en la piel humana}.\hskip 1em plus
