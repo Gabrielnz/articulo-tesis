@@ -399,7 +399,7 @@ Aar\'{o}n Mu\~{n}oz\IEEEauthorrefmark{2},\IEEEauthorrefmark{3},\IEEEauthorrefmar
 
 \begin{abstract}
 %\boldmath
-El espectrofot\'{o}metro de reflexi\'{o}n difusa, denominado MiniScan XE Plus, es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), que ayuda a los dermat\'{o}logos a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software disponible para la utilizaci\'{o}n de tal instrumento es poco amigable, dif\'{i}cil de utilizar e imposible de modificar y extender. La presente investigaci\'{o}n, a\'{u}n en avance, tiene como objetivo desarrollar un nuevo software que se ajuste a las necesidades de los dermat\'{o}logos y que garantice un mejor aprovechamiento del instrumento en cuesti\'{o}n.
+El espectrofot\'{o}metro de reflexi\'{o}n difusa, denominado MiniScan XE Plus, es un instrumento de medici\'{o}n utilizado por el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC), que ayuda a los dermat\'{o}logos y los investigadores a establecer diagn\'{o}sticos sobre patolog\'{i}as en la piel de pacientes de manera precisa y sin necesidad de realizar biopsias. No obstante, el software disponible para la utilizaci\'{o}n de tal instrumento es poco amigable, dif\'{i}cil de utilizar e imposible de modificar y extender. La presente investigaci\'{o}n, a\'{u}n en avance, tiene como objetivo desarrollar un nuevo software que se ajuste a las necesidades de los dermat\'{o}logos y los investigadores, para as\'{i} garantizar un mejor aprovechamiento del instrumento en cuesti\'{o}n.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -428,19 +428,21 @@ El espectrofot\'{o}metro de reflexi\'{o}n difusa, denominado MiniScan XE Plus, e
 
 La Espectroscop\'{i}a de Reflectancia Difusa (ERD) es una t\'{e}cnica \'{o}ptica con la cual es  posible estudiar las propiedades bioqu\'{i}micas y las condiciones estructurales de un tejido biol\'{o}gico, analizando la interacci\'{o}n luz-tejido de una manera no invasiva \cite{Perez}. Durante el diagn\'{o}stico no invasivo, no se crea ninguna ruptura en la piel y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento \cite{Bersha}.
 
-En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo \mbox{(CIMBUC)} dispone de un espectrofot\'{o}metro de reflexi\'{o}n difusa \mbox{denominado} MiniScan XE Plus, creado por la empresa HunterLab \cite{HunterLab}. El CIMBUC hace uso de este instrumento a trav\'{e}s del software disponible para su utilizaci\'{o}n, designado HunterLab Universal Software (HLUS)\cite{HunterLab-manual}.
+Los instrumentos que emplean t\'{e}cnicas como la ERD son de gran ayuda para los dermat\'{o}logos y los investigadores, raz\'{o}n por la cual tales instrumentos han tomado suma importancia en las \'{a}reas de m\'{e}dicina dermatol\'{o}gica y f\'{i}sica \'{o}ptica.
 
-El HLUS es un software \mbox{comercial} y propietario, que solo puede ejecutarse en \mbox{sistemas} \mbox{operativos} Windows que ya son obsoletos; adem\'{a}s fue \mbox{descontinuado} en el a\~{n}o 2008, por lo que no existe la posibilidad de modificarlo ni extenderlo. Su interfaz gr\'{a}fica de usuario est\'{a} en ingl\'{e}s y contiene m\'{a}s funciones de las necesarias para manejar el instrumento en estudio, lo que lo hace poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos. Sumado al hecho de que los resultados generados por dicho software no poseen el formato con el que trabajan los dermat\'{o}logos, haciendo necesario su transcripci\'{o}n manual. 
+En este sentido, el Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo \mbox{(CIMBUC)} dispone de un espectrofot\'{o}metro de reflexi\'{o}n difusa \mbox{denominado} MiniScan XE Plus, creado por la empresa HunterLab \cite{HunterLab}. El CIMBUC hace uso de este instrumento a trav\'{e}s del \'{u}nico software disponible para su utilizaci\'{o}n, designado HunterLab Universal Software (HLUS)\cite{HunterLab-manual}.
 
-Debido a lo explicado previamente, los dermat\'{o}logos experimentan dificultades al momento de utilizar el HLUS, ralentizando las consultas con los pacientes, y generando la necesidad de asistencia t\'{e}cnica especializada para su debida utilizaci\'{o}n. Por \'{u}ltimo, disminuye el potencial del instrumento en estudio.
+El HLUS es un software \mbox{comercial} y privativo que fue descontinuado en el a\~{n}o 2008, el cual solo puede ejecutarse en \mbox{sistemas} \mbox{operativos} Windows que ya son obsoletos, por lo que no existe la posibilidad de modificarlo ni extenderlo. 
 
-Ahora bien, con respecto a software de calidad, as\'{i} como los servicios que proveen, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan su calidad, los cuales se resumen en mantenibilidad, confiabilidad, eficiencia y usabilidad \cite{Sommerville}.
+La interfaz gr\'{a}fica de usuario del HLUS est\'{a} en ingl\'{e}s y contiene m\'{a}s funciones de las necesarias para manejar el instrumento en estudio, lo que lo hace poco amigable y dif\'{i}cil de entender por los dermat\'{o}logos y los investigadores, ralentizando las consultas con los pacientes y generando la necesidad de asistencia t\'{e}cnica especializada para su debida utilizaci\'{o}n. Sumado al hecho de que los resultados generados por dicho software no poseen el formato con el que ellos trabajan, haciendo necesario su transcripci\'{o}n manual. Todo esto disminuye el potencial del instrumento en estudio.
 
-Debido a que el HLUS es \mbox{propietario}, su c\'{o}digo fuente no est\'{a} disponible, de manera que este software no puede ser cambiado ni adaptarse a necesidades espec\'{i}ficas, y, por lo tanto, no posee el primer atributo esencial para un software de calidad: la mantenibilidad. Por la misma raz\'{o}n, no se puede determinar con certidumbre el segundo atributo: la confiabilidad (madurez del software y tolerancia a fallas); adem\'{a}s de que no se puede evaluar completamente el nivel de protecci\'{o}n y seguridad del mismo. Por \'{u}ltimo, la usabilidad de este software es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
+Ahora bien, los productos de software tienen cierto n\'{u}mero de atributos asociados que reflejan su calidad, los cuales se resumen en mantenibilidad, confiabilidad, eficiencia y usabilidad \cite{Sommerville}. Debido a que el HLUS es \mbox{privativo}, su c\'{o}digo fuente no est\'{a} disponible, de manera que este software no puede ser modificado ni adaptarse a necesidades espec\'{i}ficas, y, por lo tanto, no posee el primer atributo esencial para un software de calidad: la mantenibilidad. Por la misma raz\'{o}n, no se puede determinar con certidumbre el segundo atributo: la confiabilidad (madurez del software, nivel de seguridad y tolerancia a fallas). Por \'{u}ltimo, la usabilidad de este software es baja, ya que la interfaz gr\'{a}fica de usuario es poco amigable.
 
-Teniendo en cuenta todo lo mencionado previamente y siguiendo los lineamientos de dise\~{n}o y de calidad del \mbox{software} que se consideran pertinentes, se est\'{a} desarrollando un \mbox{software} amigable, modificable y extensible. Este va a ofrecer las funciones que necesitan los dermat\'{o}logos para establecer \mbox{diagn\'{o}sticos}, emplear\'{a} el formato de historia m\'{e}dica con el que trabajan, y permitir\'{a} guardar los resultados en un formato de archivo port\'{a}til. Por \'{u}ltimo, se est\'{a} creando una base sobre la cual prodr\'{a}n trabajar proyectos futuros que utilicen los resultados de este nuevo software como insumo.
+Teniendo en cuenta todo lo mencionado previamente y siguiendo los lineamientos de calidad del \mbox{software} que se consideran pertinentes, se est\'{a} desarrollando un \mbox{software} amigable, modificable y extensible. Este va a ofrecer las funciones que necesitan los dermat\'{o}logos y  los investigadores para realizar an\'{a}lisis y establecer \mbox{diagn\'{o}sticos} de patolog\'{i}as dermatol\'{o}gicas en pacientes, emplear\'{a} el formato de historia m\'{e}dica con el que trabajan, y permitir\'{a} guardar los resultados en un formato de archivo port\'{a}til. 
 
-El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de la introducci\'{o}n (secci\'{o}n I). En la secci\'{o}n II se explican diversos conceptos fundamentales para la investigaci\'{o}n, que sustentan el desarrollo de las funciones que debe ofrecer el nuevo software. En la secci\'{o}n III se describe la metodolog\'{i}a de investigaci\'{i}on y la metodolog\'{i}a de desarrollo del software que se est\'{a} utilizando. En la secci\'{o}n IV se detallan los recursos y las tecnolog\'{i}as utilizadas para el desarrollo del nuevo software. Finalmente, en la secci\'{o}n V se exponen los resultados obtenidos hasta el momento y las conclusiones.
+Por \'{u}ltimo, se est\'{a} creando un software sobre el cual se podr\'{a}n desarrollar nuevas investigaciones, que conlleven a la implementaci\'{o}n de t\'{e}cnicas que empleen an\'{a}lisis m\'{a}s complejos, y, como resultado, diagn\'{o}sticos m\'{a}s completos y diversos sobre patolog\'{i}as dermatol\'{o}gicas presentes en pacientes.
+
+El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de la introducci\'{o}n (secci\'{o}n I). En la secci\'{o}n II se explican conceptos que sustentan el desarrollo de las funciones que debe ofrecer el nuevo software. En la secci\'{o}n III se describen las metodolog\'{i}as que se est\'{a}n utilizando para llevar a cabo la investigaci\'{o}n y el desarrollo del software. En la secci\'{o}n IV se detallan los recursos y las tecnolog\'{i}as utilizadas para el desarrollo del nuevo software. Finalmente, en la secci\'{o}n V se exponen los resultados obtenidos hasta el momento y las conclusiones.
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
@@ -527,9 +529,9 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 % footnotes above bottom floats. This can be corrected via the \fnbelowfloat
 % command of the stfloats package.
 
-\section{Bases Te\'{o}ricas}
+\section{Antecedentes}
 
-	\subsection{Antecedentes}
+	\subsection{Trabajos relacionados}
 		
 		\subsubsection{\'{I}ndice de eritema}
 		este \'{i}ndice es utilizado para determinar el nivel inflamatorio de la epidermis en la piel de un paciente. El m\'{e}todo aplicado para calcular este \'{i}ndice \cite{Wagner} est\'{a} siendo implementado en el nuevo software.
@@ -537,13 +539,20 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		\subsubsection{Coeficiente de absorci\'{o}n de la epidermis}
 			 su objetivo es indicar el nivel de concentraci\'{o}n de melanina presente en la epidermis de la piel de un paciente. La t\'{e}cnica empleada para recuperar este coeficiente \cite{Narea} est\'{a} siendo implementada en el nuevo software.
 	
-	\subsection{Observaci\'{o}nes directas}
+	\subsection{Observaci\'{o}n directa}
 		
 		\subsubsection{Archivo MSXE + OCX}
 		es una hoja de c\'{a}lculo habilitada para la ejecuci\'{o}n de macroinstrucciones de Microsoft Excel, que fue proporcionada por el personal de soporte t\'{e}cnico de HunterLab \cite{HunterLab} como un ejemplo para para dar acceso a las caracteristicas comunmente utilizadas por el MiniScan XE Plus, por medio de un kit de control denominado \textit{MSXE.ocx}. El c\'{o}digo contenido en este archivo se est\'{a} empleando como referencia para observar el manejo del kit \textit{MSXE.ocx}.
 			
 		\subsubsection{HunterLab Universal Software (HLUS)}
 			es un software \mbox{comercial} y privativo de 16 bits dise\~{n}ado para el sistema \mbox{operativo} Microsoft Windows versi\'{o}n 3.x, con la posibilidad de ejecutarse en Windows 95, Windows 98, Windows 2000 y Windows XP. Fue creado para la utilizaci\'{o}n del \mbox{MiniScan} XE Plus, adem\'{a}s de otros instrumentos de la empresa \mbox{HunterLab} \cite{HunterLab-manual}, y descontinuado en el a\~{n}o 2008. Este software dispone de algunas de las funciones que est\'{a}n siendo desarrolladas en el nuevo software, raz\'{o}n por la cual es una referencia importante de observaci\'{o}n.
+	
+	\subsection{Bases te\'{o}ricas}
+		\subsubsection{Coordenadas de cromaticidad CIE 1964}
+		representan los valores triest\'{i}mulo de un color, que siguen el est\'{a}ndar establecido por la \textit{Commission Internationale de l'Eclairage (CIE)} en 1964 \cite{CIE}. El procedimiento utilizado para calcular estas coordenadas \cite{Schanda} est\'{a} siendo implementado en el nuevo software.
+
+		\subsubsection{Espacio CIE L*a*b* 1976}
+		es un sistema para transformar las coordenadas de cromaticidad \textit{CIE} 1964 y volverlas representables en un espacio de tres dimensiones, definido por la \textit{CIE} en 1976 \cite{CIE}. Las f\'{o}rmulas definidas para el c\'{a}lculo de las coordenadas resultantes de este espacio \cite{Schanda}, est\'{a}n siendo implementadas en el nuevo software para determinar propiedades \'{o}pticas presentes en la piel de los pacientes.
 
 \section{Metodolog\'{i}as}
 
@@ -585,15 +594,15 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 			\begin{tabulary}{8.8cm}{|J|}
 				\hline
 				\thead{\textbf{Artefactos SCRUM}}\\ \hline
-				\textbf{Pila del producto: }lista din\'{a}mica de las cosas que se deben hacer, sin especificar c\'{o}mo se deben hacer.\\ \hline
-				\textbf{Pila del \textit{sprint}:} recopilaci\'{o}n resumida de los \'{i}tems de la pila del producto, en donde se dividen los \'{i}tems en tareas peque\~{n}as que no demanden una labor superior a una jornada de trabajo.\\ \hline
-				\textbf{Incremento: }el producto final de cada \textit{sprint}. El mismo debe asemejarse a un software funcionando, permitiendo implementarse operativamente sin restricciones en un ambiente productivo.\\ \hline
+				\textbf{Pila del producto: }una lista de todas las tareas que se deben hacer durante el desarrollo.\\ \hline
+				\textbf{Pila del \textit{sprint}: }el grupo de tareas que se deben realizar durante \textit{sprint}.\\ \hline
+				\textbf{Incremento: }el producto final de cada \textit{sprint}. Dicho producto debe ser funcional y permitir implementarse sin restricciones en un ambiente productivo.\\ \hline
 				\thead{\textbf{Artefactos RUP}}\\ \hline
-				\textbf{Documento de visi\'{o}n: }define el alcance en alto nivel y prop\'{o}sito del producto.\\
+				\textbf{Documento de visi\'{o}n: }describe el prop\'{o}sito y el alcance en alto nivel del producto.\\
 \hline
-				\textbf{Glosario: }documento que define la terminolog\'{i}a empleada en los artefactos.\\ \hline
-				\textbf{Documento de requerimientos no funcionales: }describe los requerimientos que tienen un impacto significativo en la arquitectura y en la satisfacci\'{o}n del usuario.\\ \hline
-		\textbf{Diagrama de casos de uso: }muestra los procesos del negocio que son proporcionados para los actores del negocio.\\ \hline
+				\textbf{Glosario: }define la terminolog\'{i}a empleada en los artefactos.\\ \hline
+				\textbf{Requerimientos no funcionales: }una lista que especifica los requerimientos que tienen un impacto significativo en la arquitectura y en la satisfacci\'{o}n del usuario.\\ \hline
+		\textbf{Modelo de casos de uso: }describe los requerimientos funcionales del software en t\'{e}rminos de actores y casos de uso.\\ \hline
 			\end{tabulary}
 		\end{table}
 		\FloatBarrier %you shall not pass table!!
@@ -724,6 +733,10 @@ J. Wagner et al., \emph{Comparing Quantitative Measures of Erythema, Pigmentatio
 \bibitem{Narea}
 F. Narea et al., \emph{Recuperaci\'{o}n del coeficiente de absorci\'{o}n de la epidermis en la piel humana}.\hskip 1em plus
   0.5em minus 0.4em\relax Sociedad Espa\~{n}ola de \'{O}ptica, 2015.
+
+\bibitem{Schanda}
+J. Schanda, \emph{Colorimetry: Understanding the CIE system}.\hskip 1em plus
+  0.5em minus 0.4em\relax Hoboken, Nueva Jersey: John Wiley \& Sons, 2007.
 
 \bibitem{Baskerville}
 R.~L. Baskerville, \emph{Investigating Information Systems with Action Research}, vol~2.\hskip 1em plus
