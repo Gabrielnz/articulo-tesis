@@ -605,7 +605,6 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		Adicionalmente a la utilizaci\'{o}n de la metodolog\'{i}a SCRUM, se est\'{a}n incluyendo algunos artefactos de la metodolog\'{i}a RUP \cite{Kroll&Kruchten}, para as\'{i} generar suficiente documentaci\'{o}n durante el dise\~{n}o y el desarrollo del nuevo software. La configuraci\'{o}n de la metodolog\'{i}a SCRUM, en conjunto con los artefactos seleccionados de la metodolog\'{i}a RUP, se ilustra en la \mbox{tabla 2}.
 
 \vfill
-
 		\FloatBarrier %you shall not pass table!!
 		\begin{table}[htb]
 			\caption{TABLA 2. Configuraci\'{o}n de los artefactos a utilizar de SCRUM y RUP}
@@ -629,37 +628,47 @@ El presente art\'{i}culo est\'{a} organizado en cuatro secciones despu\'{e}s de 
 		\FloatBarrier %you shall not pass table!!
 
 \vfill
-
 \newpage
 
-\section{Recursos y Tecnolog\'{i}as}	
+\section{Tecnolog\'{i}as y Recursos}	
 	
+	\subsection{Tecnolog\'{i}as}
+		\subsubsection{Qt}
+			es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas de escritorio, sistemas integrados y sistemas m\'{o}viles \cite{Qt}. Se est\'{a} utilizando la versi\'{o}n \textit{open source} de este \textit{framework} para el desarrollo del nuevo software.
+			
+		\subsubsection{Visual Studio}
+			es un entorno integrado de desarrollo \textit{(IDE)} para crear aplicaciones en varias plataformas, como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este \textit{IDE} para desarrollar una librer\'{i}a escrita en Visual Basic .NET, que act\'{u}a como intermediaria entre el archivo MSXE.ocx y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus en el nuevo software.
+			
+		\subsubsection{PostgreSQL}
+			es un sistema \textit{open source} multiplataforma de bases de datos relacionales \cite{PostgreSQL}. Posee m\'{a}s de 15 a\~{n}os de desarrollo activo y una arquitectura que se ha ganado una fuerte reputaci\'{o}n por confiabilidad, integridad de datos y correctitud. Este sistema se est\'{a} utilizando para desarrollar y administrar la base de datos con la que opera el nuevo software.
+			
+		\subsubsection{Gitlab}
+			es un servicio de control de versiones que ofrece alojamiento gratuito, tanto p\'{u}blico como privado, de repositorios para proyectos \cite{Gitlab}. Se est\'{a} utilizando la versi\'{o}n en l\'{i}nea de este servicio para llevar un control de versiones durante el desarrollo del proyecto.
+
+		\subsubsection{QCustomPlot}
+			es un \textit{widget} \textit{open source} para Qt que permite realizar el trazado y la visualizaci\'{o}n de datos \cite{QCustomPlot}. Este \textit{widget} se est\'{a} utilizando en el nuevo software para visualizar curvas asociadas con los datos espectrales proporcionados por el MiniScan XE Plus.
+			
+		\subsubsection{QtXlsx}
+		
+			es una librer\'{i}a \textit{open source} para Qt que permite leer y escribir archivos con extensi\'{o}n xlsx \cite{Qtxlsx}. Esta librer\'{i}a est\'{a} siendo utilizada para implementar en el nuevo software la opci\'{o}n de exportar los resultados de una muestra a un archivo port\'{a}til.
+			
 	\subsection{Recursos}
-		\subsubsection{MiniScan XE Plus}
-		es un instrumento de medici\'{o}n del color, creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til \cite{MiniScanXEPlus-manual}, que emplea la t\'{e}cnica de ERD, y el cual se puede apreciar en la figura 1. Este instrumento mide la cantidad de luz que refleja una muestra dentro del espectro de luz que va desde 400 hasta 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del nuevo software.
 		
 		\subsubsection{Adaptador RS232-USB}
-			es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que emplean puerto serial con computadoras con puertos USB, creando puertos COM virtuales con dichas computadoras mientras se realiza la comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a \mbox{RJ-45} del MiniScan XE Plus \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
+			es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que utilizan puerto serial con computadoras que disponen de puertos USB, creando puertos COM virtuales con las mismas mientras se realiza dicha comunicaci\'{o}n \cite{RS232}. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a \mbox{RJ-45} del MiniScan XE Plus \cite{HunterLab-manual}, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
 		
 		\subsubsection{MiniScan XE Plus OCX Kit (MSXE.ocx)}
-			es un archivo dise\~{n}ado por la empresa HunterLab para controlar y/o realizar mediciones con el MiniScan XE Plus. Su objetivo es proveer a los desarrolladores con un componente reutilizable de software que da acceso a las caracteristicas comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.
+			es un archivo dise\~{n}ado por la empresa HunterLab para controlar y/o realizar mediciones con el MiniScan XE Plus. Su objetivo es proporcionar a los desarrolladores un componente reutilizable de software que de acceso a las caracteristicas comunmente utilizadas por el instrumento \cite{MiniScanXEPlus-manual}.
+			
+		\subsubsection{MiniScan XE Plus}
+		es un instrumento de medici\'{o}n del color, creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til \cite{MiniScanXEPlus-manual}, que emplea la t\'{e}cnica de ERD, y el cual se puede apreciar en la figura 1. Este instrumento mide la cantidad de luz que refleja una muestra dentro del espectro de luz que va desde 400 hasta 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del nuevo software.
 			
 		\begin{figure}[H]
 			\centering
 			\label{figura_1}
 			\includegraphics[scale=0.9]{img/MiniScanXEPlus}
 			\caption{FIGURA 1. MiniScan XE Plus}
-		\end{figure}		
-	
-	\subsection{Tecnolog\'{i}as}
-		\subsubsection{Qt}
-			es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas de escritorio, sistemas integrados y sistemas m\'{o}viles \cite{Qt}. Se est\'{a} utilizando la versi\'{o}n Open Source de este \textit{framework} para el desarrollo del nuevo software.
-			
-		\subsubsection{Visual Studio}
-			es un entorno integrado de desarrollo \textit{(IDE)} para crear aplicaciones en varias plataformas, como Windows, Android y iOS \cite{VS}. Se est\'{a} utilizando la versi\'{o}n gratuita de este \textit{IDE} para desarrollar una librer\'{i}a escrita en Visual Basic .NET, que act\'{u}a como intermediaria entre el archivo MSXE.ocx y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus junto con el nuevo software.
-
-		\subsubsection{QCustomPlot}
-			es un \textit{widget} de Qt para el trazado y visualizaci\'{o}n de datos \cite{QCustomPlot}. Este \textit{widget} est\'{a} siendo empleado por el nuevo software para visualizar la curva de reflectancia difusa y la curva de absorbancia aparente asociadas a los 31 puntos espectrales.
+		\end{figure}
 
 \section{Resultados y Conclusiones}
 	
@@ -793,11 +802,23 @@ The Qt Company, \emph{Qt, a Cross-Platform Framework for Application Development
 
 \bibitem{VS}
 Microsoft, \emph{Visual Studio Community, a fully-featured, extensible IDE}.\hskip 1em plus
-0.5em minus 0.4em\relax https://www.visualstudio.com/products/visual-studio-community-vs
+0.5em minus 0.4em\relax https://www.visualstudio.com/products/visual-studio-community-vs.
+
+\bibitem{PostgreSQL}
+PostgreSQL, \emph{PostgreSQL: The world's most advanced open source database}.\hskip 1em plus
+0.5em minus 0.4em\relax http://www.postgresql.org/about.
+
+\bibitem{Gitlab}
+Gitlab, \emph{Gitlab: Create, review, and deploy code together}.\hskip 1em plus
+0.5em minus 0.4em\relax https://about.gitlab.com.
 
 \bibitem{QCustomPlot}
 QCustomPlot, \emph{A Qt C++ widget for plotting and data visualization}.\hskip 1em plus
 0.5em minus 0.4em\relax http://www.qcustomplot.com/index.php/introduction.
+
+\bibitem{Qtxlsx}
+QtXlsx, \emph{A Qt library to read and write excel files that can be used in any platform that Qt5 supported}.\hskip 1em plus
+0.5em minus 0.4em\relax http://www.qtxlsx.debao.me.
 
 \end{thebibliography}
 
